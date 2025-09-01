@@ -179,12 +179,22 @@ body {
 .text-primary { color: hsl(var(--primary)); }
 .text-muted { color: hsl(var(--muted)); }
 .text-white { color: white; }
+.text-brand-green { color: hsl(var(--brand-green)); }
+.text-brand-offwhite { color: hsl(var(--brand-offwhite)); }
+
 .bg-background { background-color: hsl(var(--background)); }
 .bg-surface { background-color: hsl(var(--surface)); }
 .bg-primary { background-color: hsl(var(--primary)); }
 .bg-brand-charcoal { background-color: hsl(var(--brand-charcoal)); }
 .bg-brand-offwhite { background-color: hsl(var(--brand-offwhite)); }
+.bg-brand-green { background-color: hsl(var(--brand-green)); }
+.bg-white { background-color: white; }
+
 .border-border { border-color: hsl(var(--border)); }
+.border-brand-green-700 { border-color: hsl(var(--brand-green-700)); }
+
+.hover\:text-brand-offwhite:hover { color: hsl(var(--brand-offwhite)); }
+.hover\:bg-brand-offwhite:hover { background-color: hsl(var(--brand-offwhite)); }
 
 /* Layout Classes */
 .flex { display: flex; }
@@ -262,6 +272,7 @@ body {
   position: relative;
   overflow: hidden;
   background-image: var(--gradient-hero-overlay), url('../assets/hero.jpg');
+  padding-top: 80px; /* Account for fixed header height */
 }
 
 .hero-content {
@@ -270,7 +281,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 80px); /* Adjust for header height */
 }
 
 /* Ken Burns animation for hero */
@@ -509,8 +520,21 @@ body {
 
 /* Navigation specific styles */
 nav {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: hsl(var(--brand-green));
   backdrop-filter: blur(4px);
+}
+
+/* Navigation text colors for green background */
+nav .text-foreground {
+  color: white;
+}
+
+nav .text-foreground:hover {
+  color: hsl(var(--brand-offwhite));
+}
+
+nav .hover\\:text-primary:hover {
+  color: hsl(var(--brand-offwhite));
 }
 
 /* Background gradients */
