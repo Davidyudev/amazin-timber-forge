@@ -3,10 +3,9 @@ import type { Config } from "tailwindcss";
 export default {
 	darkMode: ["class"],
 	content: [
-		"./pages/**/*.{ts,tsx}",
-		"./components/**/*.{ts,tsx}",
-		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
+		"./*.html",
+		"./src/**/*.{html,js,ts,jsx,tsx}",
+		"./js/**/*.js",
 	],
 	prefix: "",
 	theme: {
@@ -18,50 +17,53 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+				'roboto': ['Roboto', 'system-ui', '-apple-system', 'sans-serif'],
+			},
 			colors: {
+				// Amazin Timber Brand Colors
+				'brand-green': 'hsl(var(--brand-green))',
+				'brand-green-700': 'hsl(var(--brand-green-700))',
+				'brand-wood': 'hsl(var(--brand-wood))',
+				'brand-charcoal': 'hsl(var(--brand-charcoal))',
+				'brand-offwhite': 'hsl(var(--brand-offwhite))',
+				'brand-white': 'hsl(var(--brand-white))',
+				'brand-muted': 'hsl(var(--brand-muted))',
+				
+				// Semantic Design Tokens
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
+				'input-border': 'hsl(var(--input-border))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				surface: 'hsl(var(--surface))',
+				'surface-elevated': 'hsl(var(--surface-elevated))',
+				
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					hover: 'hsl(var(--primary-hover))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
-				},
-				destructive: {
-					DEFAULT: 'hsl(var(--destructive))',
-					foreground: 'hsl(var(--destructive-foreground))'
-				},
-				muted: {
-					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))'
+					foreground: 'hsl(var(--secondary-foreground))',
+					hover: 'hsl(var(--secondary-hover))'
 				},
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))'
 				},
-				popover: {
-					DEFAULT: 'hsl(var(--popover))',
-					foreground: 'hsl(var(--popover-foreground))'
-				},
-				card: {
-					DEFAULT: 'hsl(var(--card))',
-					foreground: 'hsl(var(--card-foreground))'
-				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+				muted: {
+					DEFAULT: 'hsl(var(--muted))',
+					foreground: 'hsl(var(--muted-foreground))'
 				}
+			},
+			boxShadow: {
+				'soft': 'var(--shadow-soft)',
+				'medium': 'var(--shadow-medium)',
+				'large': 'var(--shadow-large)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

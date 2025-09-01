@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://amazintimber.com/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block common spam bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Amazin Timber — [Arabic Title Placeholder]</title>
+    <meta name="description" content="[Arabic Description Placeholder]">
+    <meta name="author" content="Amazin Timber">
+    <link rel="canonical" href="https://amazintimber.com/ar">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://amazintimber.com/ar">
+    <meta property="og:title" content="Amazin Timber — [Arabic Title Placeholder]">
+    <meta property="og:description" content="[Arabic Description Placeholder]">
+    <meta property="og:image" content="https://amazintimber.com/assets/hero.jpg">
+    
+    <!-- Google Fonts - Arabic Support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <!-- RTL Specific Styles -->
+    <style>
+        body[dir="rtl"] {
+            font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+        }
+        
+        [dir="rtl"] .hero-content {
+            text-align: right;
+        }
+        
+        [dir="rtl"] .section-container {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        
+        [dir="rtl"] .flex-row-reverse {
+            flex-direction: row-reverse;
+        }
+        
+        /* Arabic typography adjustments */
+        [dir="rtl"] .text-hero {
+            line-height: 1.4;
+        }
+        
+        [dir="rtl"] .text-body {
+            line-height: 1.8;
+        }
+    </style>
+    
+    <!-- Google Analytics GA4 - Replace {{GA_MEASUREMENT_ID}} with your actual ID -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id={{GA_MEASUREMENT_ID}}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{GA_MEASUREMENT_ID}}');
+    </script> -->
+</head>
+<body class="font-inter" dir="rtl">
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-link">[Skip to main content - Arabic]</a>
+    
+    <!-- Language Switcher -->
+    <div class="fixed top-4 left-4 z-50">
+        <a href="./index.html" class="bg-white/10 backdrop-blur-sm text-white px-3 py-2 rounded-lg text-sm hover:bg-white/20 transition-all duration-200">English</a>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-200" id="navbar">
+        <div class="section-container">
+            <div class="flex items-center justify-between py-4">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <img src="/lovable-uploads/e255378a-b574-4f49-b595-e1d8b4aa0ea6.png" alt="Amazin Timber" class="h-12 w-auto">
+                </div>
+                
+                <!-- Desktop Navigation - RTL Order -->
+                <div class="hidden md:flex items-center space-x-8 flex-row-reverse">
+                    <a href="#home" class="text-foreground hover:text-primary transition-colors">[Home - Arabic]</a>
+                    <a href="#products" class="text-foreground hover:text-primary transition-colors">[Products - Arabic]</a>
+                    <a href="#species" class="text-foreground hover:text-primary transition-colors">[Species - Arabic]</a>
+                    <a href="#process" class="text-foreground hover:text-primary transition-colors">[Process - Arabic]</a>
+                    <a href="#why-us" class="text-foreground hover:text-primary transition-colors">[Why Us - Arabic]</a>
+                    <a href="#certifications" class="text-foreground hover:text-primary transition-colors">[Certifications - Arabic]</a>
+                    <a href="#faq" class="text-foreground hover:text-primary transition-colors">[FAQ - Arabic]</a>
+                    <a href="#catalog" class="text-foreground hover:text-primary transition-colors">[Catalog - Arabic]</a>
+                    <a href="#quote" class="btn-primary">[Request Quote - Arabic]</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2" id="mobile-menu-btn" aria-label="[Open mobile menu - Arabic]">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
+                    <a href="#home" class="block px-3 py-2 text-foreground hover:text-primary">[Home - Arabic]</a>
+                    <a href="#products" class="block px-3 py-2 text-foreground hover:text-primary">[Products - Arabic]</a>
+                    <a href="#species" class="block px-3 py-2 text-foreground hover:text-primary">[Species - Arabic]</a>
+                    <a href="#process" class="block px-3 py-2 text-foreground hover:text-primary">[Process - Arabic]</a>
+                    <a href="#why-us" class="block px-3 py-2 text-foreground hover:text-primary">[Why Us - Arabic]</a>
+                    <a href="#certifications" class="block px-3 py-2 text-foreground hover:text-primary">[Certifications - Arabic]</a>
+                    <a href="#faq" class="block px-3 py-2 text-foreground hover:text-primary">[FAQ - Arabic]</a>
+                    <a href="#catalog" class="block px-3 py-2 text-foreground hover:text-primary">[Catalog - Arabic]</a>
+                    <a href="#quote" class="block px-3 py-2 btn-primary text-center">[Request Quote - Arabic]</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="section-container hero-content">
+                <div class="max-w-3xl">
+                    <h1 class="text-hero text-white mb-6 opacity-0 animate-fade-in-up">
+                        [Global Wood Solutions, Delivered at Scale - Arabic]
+                    </h1>
+                    <p class="text-body text-white/90 mb-8 opacity-0 animate-fade-in-up animate-delay-200">
+                        [We connect international buyers with reliable mills across Brazil and other leading timber regions—customized specs, container-scale volumes, and coordinated FOB shipments. - Arabic]
+                    </p>
+                    
+                    <!-- Feature Chips -->
+                    <div class="flex flex-wrap gap-4 mb-8 opacity-0 animate-fade-in-up animate-delay-400">
+                        <span class="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium">[FCL+ Supply - Arabic]</span>
+                        <span class="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium">[FOB Incoterms® 2020 - Arabic]</span>
+                        <span class="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium">[Compliance-Focused - Arabic]</span>
+                    </div>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in-up animate-delay-600">
+                        <a href="#quote" class="btn-primary">[Request a Quote - Arabic]</a>
+                        <a href="./assets/Amazin-Timber-2025-Catalog.pdf" class="btn-outline" target="_blank">[Download 2025 Catalog (PDF) - Arabic]</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Product Portfolio Section -->
+        <section id="products" class="section-padding bg-gradient-to-b from-brand-offwhite to-white">
+            <div class="section-container">
+                <div class="text-center mb-16">
+                    <h2 class="text-h2 text-foreground mb-4">[Product Portfolio - Arabic]</h2>
+                    <p class="text-body text-muted max-w-2xl mx-auto">[Comprehensive wood solutions from tropical hardwoods to engineered products, all delivered at container scale with FOB coordination. - Arabic]</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Product Cards - Arabic content placeholders -->
+                    <div class="product-card" data-aos="fade-up">
+                        <h3 class="text-xl font-semibold text-foreground mb-3">[Solid Decking & Flooring - Arabic]</h3>
+                        <p class="text-muted">[Ipê, Cumaru, Jatobá, Garapa, Teak. Container-scale volumes; custom profiles. - Arabic]</p>
+                    </div>
+                    
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-xl font-semibold text-foreground mb-3">[Engineered Flooring - Arabic]</h3>
+                        <p class="text-muted">[Tropical top layer, multilayer core for stability. - Arabic]</p>
+                    </div>
+                    
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-xl font-semibold text-foreground mb-3">[Sawn Timber - Arabic]</h3>
+                        <p class="text-muted">[Tropical & reforestation species; rough-sawn or machined to spec. - Arabic]</p>
+                    </div>
+                    
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="text-xl font-semibold text-foreground mb-3">[Plywood - Arabic]</h3>
+                        <p class="text-muted">[Pine, Eucalyptus; WBP options; E0/E1 grades available. - Arabic]</p>
+                    </div>
+                    
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="400">
+                        <h3 class="text-xl font-semibold text-foreground mb-3">[MDF / MDP / HDF - Arabic]</h3>
+                        <p class="text-muted">[Multiple densities and finishes for interior use. - Arabic]</p>
+                    </div>
+                    
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="500">
+                        <h3 class="text-xl font-semibold text-foreground mb-3">[Doors & Frames - Arabic]</h3>
+                        <p class="text-muted">[Solid or engineered; fire-rated options on request. - Arabic]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Additional sections would continue with Arabic placeholder content -->
+        <!-- For brevity, including just a few key sections as examples -->
+        
+        <!-- About Section -->
+        <section class="section-padding">
+            <div class="section-container">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-h2 text-foreground mb-6">[About Amazin Timber - Arabic]</h2>
+                    <p class="text-body text-muted leading-relaxed">
+                        [Amazin Timber connects buyers with vetted mills to ensure fit-for-purpose wood products at container scale. Through our supplier network in Brazil and beyond, we align specs, lead times, and factory-level pricing while coordinating every step through vessel departure. - Arabic]
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quote Form Section - Simplified for Arabic -->
+        <section id="quote" class="section-padding bg-gradient-to-b from-brand-offwhite to-white">
+            <div class="section-container">
+                <div class="text-center mb-16">
+                    <h2 class="text-h2 text-foreground mb-4">[Request a Quote - Arabic]</h2>
+                    <p class="text-body text-muted max-w-2xl mx-auto">
+                        [Get a customized FOB quotation for your timber requirements. Minimum order: 1 FCL. - Arabic]
+                    </p>
+                </div>
+                
+                <!-- Note: Form would need Arabic field labels and RTL form layout -->
+                <div class="max-w-2xl mx-auto text-center">
+                    <p class="text-body text-muted mb-8">
+                        [Arabic translation in progress. Please use the English form for now.]
+                    </p>
+                    <a href="./index.html#quote" class="btn-primary">[Use English Form - Arabic]</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-brand-charcoal text-white section-padding">
+        <div class="section-container">
+            <div class="text-center">
+                <img src="/lovable-uploads/e255378a-b574-4f49-b595-e1d8b4aa0ea6.png" alt="Amazin Timber" class="h-16 w-auto mx-auto mb-6 invert">
+                <p class="text-white/80 mb-4">[Global Wood Solutions, Delivered at Scale - Arabic]</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-white/60">
+                    <span>[Email - Arabic]: sales@amazintimber.com</span>
+                    <span class="hidden sm:inline">|</span>
+                    <span>[Phone - Arabic]: +1 (555) 010-0000</span>
+                </div>
+                <div class="mt-8 pt-8 border-t border-white/20 text-center text-sm text-white/40">
+                    <p>&copy; 2025 Amazin Timber. [All rights reserved - Arabic].</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="./js/main.js" defer></script>
+    
+    <!-- RTL-specific JavaScript adjustments -->
+    <script>
+        // Simple RTL adjustments for mobile menu and animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Adjust animation directions for RTL
+            const rtlElements = document.querySelectorAll('[data-aos]');
+            rtlElements.forEach(el => {
+                const aosValue = el.getAttribute('data-aos');
+                if (aosValue === 'fade-left') {
+                    el.setAttribute('data-aos', 'fade-right');
+                } else if (aosValue === 'fade-right') {
+                    el.setAttribute('data-aos', 'fade-left');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+<!-- 
+TRANSLATION INSTRUCTIONS:
+1. Replace all content within [brackets] with Arabic translations
+2. Ensure proper Arabic typography and spacing
+3. Test RTL layout and make adjustments as needed
+4. Consider cultural adaptations for business messaging
+5. Verify contact information and legal requirements for Arabic markets
+
+TRANSLATION KEY SECTIONS:
+- Navigation items
+- Hero headline and description
+- Product categories and descriptions
+- Process steps
+- FAQ questions and answers
+- Form labels and placeholders
+- Contact information labels
+-->

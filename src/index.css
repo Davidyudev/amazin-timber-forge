@@ -2,96 +2,282 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Amazin Timber Design System - Professional B2B Timber Industry */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Brand Colors - Amazin Timber */
+    --brand-green: 155 61% 20%;      /* #0F5132 */
+    --brand-green-700: 155 55% 25%;  /* #146C43 */
+    --brand-wood: 28 55% 45%;        /* #A26D3D */
+    --brand-charcoal: 0 0% 13%;      /* #222222 */
+    --brand-offwhite: 46 67% 97%;    /* #FAF8F5 */
+    --brand-white: 0 0% 100%;        /* #FFFFFF */
+    --brand-muted: 220 14% 46%;      /* #6B7280 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
+    /* Semantic Design Tokens */
+    --background: var(--brand-offwhite);
+    --foreground: var(--brand-charcoal);
+    --surface: var(--brand-white);
+    --surface-elevated: var(--brand-white);
+    
+    --primary: var(--brand-green);
+    --primary-foreground: var(--brand-white);
+    --primary-hover: var(--brand-green-700);
+    
+    --secondary: var(--brand-wood);
+    --secondary-foreground: var(--brand-white);
+    --secondary-hover: 28 60% 40%;
+    
+    --accent: var(--brand-green-700);
+    --accent-foreground: var(--brand-white);
+    
+    --muted: var(--brand-muted);
+    --muted-foreground: var(--brand-white);
+    
+    --border: 220 14% 85%;
+    --input: var(--brand-white);
+    --input-border: 220 14% 85%;
+    --ring: var(--brand-green);
+    
+    /* Typography Scale */
+    --text-hero: 3rem;        /* 48px */
+    --text-h2: 2rem;          /* 32px */
+    --text-body: 1.125rem;    /* 18px */
+    --text-small: 0.875rem;   /* 14px */
+    
+    --text-hero-tablet: 2.25rem; /* 36px */
+    --text-h2-tablet: 1.75rem;   /* 28px */
+    --text-body-tablet: 1.0625rem; /* 17px */
+    
+    --text-hero-mobile: 1.75rem; /* 28px */
+    --text-h2-mobile: 1.5rem;    /* 24px */
+    --text-body-mobile: 1rem;    /* 16px */
+    
+    /* Spacing & Layout */
+    --container-max: 1200px;
+    --section-padding: 6rem;
+    --section-padding-mobile: 3rem;
     --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --radius-lg: 1rem;
+    
+    /* Shadows & Effects */
+    --shadow-soft: 0 4px 6px -1px hsl(var(--brand-charcoal) / 0.1);
+    --shadow-medium: 0 10px 15px -3px hsl(var(--brand-charcoal) / 0.1);
+    --shadow-large: 0 25px 50px -12px hsl(var(--brand-charcoal) / 0.25);
+    
+    /* Gradients */
+    --gradient-hero-overlay: linear-gradient(90deg, hsl(var(--brand-green) / 0.9) 0%, hsl(var(--brand-green) / 0.3) 100%);
+    --gradient-section: linear-gradient(135deg, hsl(var(--brand-offwhite)) 0%, hsl(var(--brand-white)) 100%);
+    
+    /* Transitions */
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+  /* Typography */
+  * {
+    @apply border-border;
   }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+    line-height: 1.6;
+  }
+  
+  /* Focus styles for accessibility */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Hero Section */
+  .hero-section {
+    @apply min-h-screen bg-cover bg-center bg-no-repeat relative overflow-hidden;
+    background-image: var(--gradient-hero-overlay), url('/assets/hero.jpg');
+  }
+  
+  .hero-content {
+    @apply relative z-10 flex flex-col justify-center min-h-screen;
+  }
+  
+  /* Ken Burns animation for hero */
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-section::after {
+      content: '';
+      @apply absolute inset-0 bg-cover bg-center;
+      background-image: url('/assets/hero.jpg');
+      animation: kenBurns 20s ease-out infinite alternate;
+      z-index: -1;
+    }
+  }
+  
+  /* Typography Components */
+  .text-hero {
+    font-size: var(--text-hero);
+    @apply font-bold leading-tight;
+  }
+  
+  .text-h2 {
+    font-size: var(--text-h2);
+    @apply font-semibold leading-tight;
+  }
+  
+  .text-body {
+    font-size: var(--text-body);
+    @apply leading-relaxed;
+  }
+  
+  .text-small {
+    font-size: var(--text-small);
+  }
+  
+  /* Button Components */
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground;
+    @apply px-8 py-4 rounded-lg font-medium;
+    @apply transition-all duration-200 shadow-medium hover:shadow-large;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary/90 text-secondary-foreground;
+    @apply px-8 py-4 rounded-lg font-medium;
+    @apply transition-all duration-200 shadow-medium hover:shadow-large;
+    @apply focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-white text-white hover:bg-white hover:text-primary;
+    @apply px-8 py-4 rounded-lg font-medium;
+    @apply transition-all duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2;
+  }
+  
+  /* Card Components */
+  .product-card {
+    @apply bg-surface rounded-lg p-6 shadow-soft hover:shadow-medium;
+    @apply transition-all duration-200 hover:-translate-y-1;
+    @apply border border-border;
+  }
+  
+  .certification-logo {
+    @apply grayscale hover:grayscale-0 transition-all duration-200 hover:scale-105;
+    @apply opacity-70 hover:opacity-100;
+  }
+  
+  /* Form Components */
+  .form-input {
+    @apply w-full px-4 py-3 rounded-lg border border-input-border;
+    @apply bg-input text-foreground placeholder:text-muted;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+    @apply transition-all duration-200;
+  }
+  
+  .form-textarea {
+    @apply w-full px-4 py-3 rounded-lg border border-input-border;
+    @apply bg-input text-foreground placeholder:text-muted;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+    @apply transition-all duration-200 resize-vertical min-h-24;
+  }
+  
+  .form-checkbox {
+    @apply w-4 h-4 text-primary border-input-border rounded;
+    @apply focus:ring-2 focus:ring-primary focus:ring-offset-0;
+  }
+  
+  .form-radio {
+    @apply w-4 h-4 text-primary border-input-border;
+    @apply focus:ring-2 focus:ring-primary focus:ring-offset-0;
+  }
+  
+  /* Section Components */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+  }
+  
+  /* Skip Link for Accessibility */
+  .skip-link {
+    @apply absolute -top-10 left-4 bg-primary text-primary-foreground px-4 py-2 rounded;
+    @apply focus:top-4 transition-all duration-200 z-50;
+  }
+}
+
+@layer utilities {
+  /* Responsive Typography */
+  @media (max-width: 1024px) {
+    .text-hero { font-size: var(--text-hero-tablet); }
+    .text-h2 { font-size: var(--text-h2-tablet); }
+    .text-body { font-size: var(--text-body-tablet); }
+    .section-padding {
+      padding-top: calc(var(--section-padding) * 0.75);
+      padding-bottom: calc(var(--section-padding) * 0.75);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .text-hero { font-size: var(--text-hero-mobile); }
+    .text-h2 { font-size: var(--text-h2-mobile); }
+    .text-body { font-size: var(--text-body-mobile); }
+    .section-padding {
+      padding-top: var(--section-padding-mobile);
+      padding-bottom: var(--section-padding-mobile);
+    }
+  }
+  
+  /* Animation Keyframes */
+  @keyframes kenBurns {
+    0% { transform: scale(1) rotate(0deg); }
+    100% { transform: scale(1.1) rotate(1deg); }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Animation Classes */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .animate-delay-200 { animation-delay: 0.2s; }
+  .animate-delay-400 { animation-delay: 0.4s; }
+  .animate-delay-600 { animation-delay: 0.6s; }
+  
+  /* RTL Support */
+  [dir="rtl"] .section-container {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  [dir="rtl"] .text-right { @apply text-left; }
+  [dir="rtl"] .text-left { @apply text-right; }
 }
 
 @layer base {
