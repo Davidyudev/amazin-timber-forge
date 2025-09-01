@@ -62,31 +62,38 @@
     // FAQ Accordion functionality
     const faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(question => {
-        question.addEventListener('click', function() {
-            const answer = document.getElementById(this.getAttribute('aria-controls'));
+        question.addEventListener('click', function(e) {
+            e.preventDefault();
+            const answerId = this.getAttribute('aria-controls');
+            const answer = document.getElementById(answerId);
             const icon = this.querySelector('.faq-icon');
             const isOpen = this.getAttribute('aria-expanded') === 'true';
             
             // Close all other FAQs
             faqQuestions.forEach(otherQuestion => {
                 if (otherQuestion !== this) {
-                    const otherAnswer = document.getElementById(otherQuestion.getAttribute('aria-controls'));
+                    const otherAnswerId = otherQuestion.getAttribute('aria-controls');
+                    const otherAnswer = document.getElementById(otherAnswerId);
                     const otherIcon = otherQuestion.querySelector('.faq-icon');
-                    otherQuestion.setAttribute('aria-expanded', 'false');
-                    otherAnswer.classList.add('hidden');
-                    otherIcon.textContent = '+';
+                    if (otherAnswer && otherIcon) {
+                        otherQuestion.setAttribute('aria-expanded', 'false');
+                        otherAnswer.classList.add('hidden');
+                        otherIcon.textContent = '+';
+                    }
                 }
             });
             
             // Toggle current FAQ
-            if (isOpen) {
-                this.setAttribute('aria-expanded', 'false');
-                answer.classList.add('hidden');
-                icon.textContent = '+';
-            } else {
-                this.setAttribute('aria-expanded', 'true');
-                answer.classList.remove('hidden');
-                icon.textContent = '−';
+            if (answer && icon) {
+                if (isOpen) {
+                    this.setAttribute('aria-expanded', 'false');
+                    answer.classList.add('hidden');
+                    icon.textContent = '+';
+                } else {
+                    this.setAttribute('aria-expanded', 'true');
+                    answer.classList.remove('hidden');
+                    icon.textContent = '−';
+                }
             }
         });
     });
