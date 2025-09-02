@@ -77,7 +77,7 @@
                     const otherIcon = otherQuestion.querySelector('.faq-icon');
                     if (otherAnswer && otherIcon) {
                         otherQuestion.setAttribute('aria-expanded', 'false');
-                        otherAnswer.classList.add('hidden');
+                        otherAnswer.style.display = 'none';
                         otherIcon.textContent = '+';
                     }
                 }
@@ -87,11 +87,11 @@
             if (answer && icon) {
                 if (isOpen) {
                     this.setAttribute('aria-expanded', 'false');
-                    answer.classList.add('hidden');
+                    answer.style.display = 'none';
                     icon.textContent = '+';
                 } else {
                     this.setAttribute('aria-expanded', 'true');
-                    answer.classList.remove('hidden');
+                    answer.style.display = 'block';
                     icon.textContent = '−';
                 }
             }
