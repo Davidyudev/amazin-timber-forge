@@ -98,6 +98,8 @@ html {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Account for fixed header when scrolling to sections */
+  scroll-padding-top: 80px;
 }
 
 body {
