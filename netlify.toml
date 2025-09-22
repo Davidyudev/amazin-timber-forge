@@ -1,0 +1,66 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/404"
+  to = "/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/success"
+  to = "/success.html"
+  status = 200
+  
+[[redirects]]
+  from = "/index.ar.html"
+  to = "/index.ar.html"
+  status = 200
+
+[[redirects]]
+  from = "/ar"
+  to = "/index.ar.html"
+  status = 200
+
+[[redirects]]
+  from = "/ar/"
+  to = "/index.ar.html"
+  status = 200
+
+# Your existing catch-all (leave this last!)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Redirect old paths (add as needed)
+[[redirects]]
+  from = "/quote"
+  to = "/#quote"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
