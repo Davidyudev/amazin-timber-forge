@@ -166,18 +166,26 @@ const HomePage = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center bg-brand-green">
+      <section id="home" className="min-h-screen flex items-center bg-brand-green pt-20">
         <div className="section-container">
           <div className="max-w-3xl mx-auto text-center">
             <motion.h1 
-              className="text-5xl md:text-6xl font-bold text-white mb-6"
+              className={`font-bold text-white mb-6 ${
+                i18n.language === 'fr' || i18n.language === 'es' 
+                  ? 'text-2xl md:text-3xl lg:text-4xl' 
+                  : 'text-5xl md:text-6xl'
+              }`}
               initial={{ opacity: 0, y: 20 }}
               animate={controls}
             >
               {t("hero.title")}
             </motion.h1>
             <motion.p 
-              className="text-xl md:text-2xl text-white/90 mb-8"
+              className={`text-white/90 mb-8 ${
+                i18n.language === 'fr' || i18n.language === 'es' 
+                  ? 'text-base md:text-lg' 
+                  : 'text-xl md:text-2xl'
+              }`}
               initial={{ opacity: 0, y: 20 }}
               animate={controls}
               transition={{ delay: 0.2 }}
