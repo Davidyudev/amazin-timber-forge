@@ -1,0 +1,178 @@
+{
+  "welcome": "Bienvenue chez Amazin Timber",
+  "quote": "Demander un devis",
+  "tagline": "Solutions de bois premium pour les marchés mondiaux",
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "species": "Espèces",
+    "process": "Processus",
+    "whyUs": "Pourquoi",
+    "compliance": "Conformité",
+    "certifications": "Certifications",
+    "faq": "FAQ",
+    "catalog": "Catalogue"
+  },
+  "hero": {
+    "title": "Solutions de bois mondiales, livrées à grande échelle",
+    "subtitle": "Nous connectons les acheteurs internationaux avec des usines fiables à travers le Brésil et d'autres régions forestières leaders—spécifications personnalisées, volumes à l'échelle de conteneurs, et expéditions FOB coordonnées.",
+    "features": {
+      "fcl": "Approvisionnement FCL+",
+      "fob": "FOB Incoterms® 2020",
+      "compliance": "Axé sur la conformité"
+    },
+    "cta": {
+      "quote": "Demander un devis",
+      "catalog": "Télécharger le catalogue 2025 (PDF)"
+    }
+  },
+  "products": {
+    "title": "Portefeuille de produits",
+    "subtitle": "Solutions de bois complètes des bois tropicaux aux produits d'ingénierie, toutes livrées en volumes à l'échelle de conteneurs avec coordination FOB.",
+    "items": {
+      "decking": {
+        "title": "Terrasses et planchers solides",
+        "description": "Ipe, Cumaru, Jatoba, Garapa, Teck. Volumes de conteneurs; dimensions personnalisées."
+      },
+      "engineered": {
+        "title": "Plancher d'ingénierie",
+        "description": "Couche supérieure tropicale, noyau multi-plis pour la stabilité."
+      },
+      "sawn": {
+        "title": "Bois scié",
+        "description": "Espèces tropicales et reboisées; brut ou traité selon les spécifications."
+      },
+      "plywood": {
+        "title": "Contreplaqué",
+        "description": "Pin, Camphre; options WBP; grades E0/E1 disponibles."
+      },
+      "mdf": {
+        "title": "MDF / MDP / HDF",
+        "description": "Densités et finitions multiples pour usage intérieur."
+      },
+      "doors": {
+        "title": "Portes et cadres",
+        "description": "Solide ou d'ingénierie; options résistantes au feu sur demande."
+      }
+    }
+  },
+  "species": {
+    "title": "Espèces clés",
+    "tropical": {
+      "title": "Tropical",
+      "description": "Ipe, Cumaru, Jatoba, Garapa, Teck"
+    },
+    "reforested": {
+      "title": "Reboisé",
+      "description": "Pin Elliott/Taeda, Eucalyptus Grandis"
+    }
+  },
+  "process": {
+    "title": "Comment ça marche",
+    "subtitle": "Processus simple et transparent de la spécification à la livraison FOB",
+    "steps": {
+      "1": {
+        "title": "Envoyer les spécifications",
+        "description": "Envoyez les spécifications et le volume (minimum: 1 FCL)"
+      },
+      "2": {
+        "title": "Recevoir le devis",
+        "description": "Recevez un devis FOB en USD (Incoterms 2020)"
+      },
+      "3": {
+        "title": "Confirmer et payer",
+        "description": "Confirmez et payez (CAD / T/T contre B/L)"
+      },
+      "4": {
+        "title": "Contrôle qualité",
+        "description": "Production et QC (SGS / Bureau Veritas optionnel)"
+      },
+      "5": {
+        "title": "Expédition FOB",
+        "description": "Documentation d'exportation et expédition FOB"
+      }
+    },
+    "cta": "Commencer votre commande"
+  },
+  "whyUs": {
+    "title": "Pourquoi Amazin Timber",
+    "points": [
+      "Partenaire mondial pour l'approvisionnement en produits de bois de haute qualité",
+      "Solutions à l'échelle de conteneurs (FCL+)",
+      "Tarification FOB et coordination d'exportation",
+      "Contrôle qualité tiers disponible (SGS / Bureau Veritas)",
+      "Certifications disponibles sur demande (FSC®, PEFC)"
+    ]
+  },
+  "certifications": {
+    "title": "Certifications et partenaires",
+    "subtitle": "Assurance qualité grâce à des organismes d'accréditation de confiance"
+  },
+  "about": {
+    "title": "À propos d'Amazin Timber",
+    "description": "Amazin Timber connecte les acheteurs avec des usines fiables pour assurer des produits de bois adaptés à leur usage à l'échelle de conteneurs. Grâce à notre réseau de fournisseurs au Brésil et au-delà, nous garantissons la conformité aux spécifications, les délais, et les prix au niveau de l'usine avec coordination de chaque étape jusqu'au départ du navire."
+  },
+  "catalog": {
+    "title": "Catalogue de produits 2025",
+    "subtitle": "Téléchargez notre catalogue complet présentant les spécifications, grades et disponibilité pour toutes les catégories de produits.",
+    "cta": "Télécharger le catalogue (PDF)"
+  },
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "questions": {
+      "minimum": {
+        "question": "Quelle est la quantité minimale de commande?",
+        "answer": "Un conteneur complet (1 FCL)."
+      },
+      "incoterms": {
+        "question": "Quels Incoterms utilisez-vous?",
+        "answer": "FOB (Incoterms® 2020)."
+      },
+      "payment": {
+        "question": "Quelles sont les conditions de paiement?",
+        "answer": "CAD ou T/T contre B/L."
+      },
+      "quality": {
+        "question": "Offrez-vous un contrôle qualité tiers?",
+        "answer": "Oui — SGS ou Bureau Veritas sur demande."
+      },
+      "certified": {
+        "question": "Les matériaux certifiés sont-ils disponibles?",
+        "answer": "La disponibilité FSC®/PEFC dépend du produit et de l'usine."
+      },
+      "regions": {
+        "question": "Quelles régions servez-vous?",
+        "answer": "Principalement le Brésil; autres régions selon la disponibilité."
+      }
+    }
+  },
+  "quote": {
+    "title": "Demander un devis",
+    "subtitle": "Obtenez un devis FOB personnalisé pour vos besoins en bois. Commande minimale: 1 FCL.",
+    "form": {
+      "companyName": "Nom de l'entreprise",
+      "contactName": "Nom du contact",
+      "email": "Email professionnel",
+      "phone": "Téléphone / WhatsApp",
+      "location": "Pays et ville",
+      "website": "Site web",
+      "productCategories": "Catégorie de produit (sélectionnez tout ce qui s'applique)",
+      "products": {
+        "decking": "Terrasses",
+        "engineered": "D'ingénierie",
+        "sawn": "Scié",
+        "plywood": "Contreplaqué",
+        "mdf": "MDF / MDP / HDF",
+        "doors": "Portes",
+        "other": "Autre"
+      },
+      "submit": "Soumettre la demande de devis"
+    }
+  },
+  "footer": {
+    "tagline": "Solutions de bois mondiales, livrées à grande échelle",
+    "email": "Email: sales@amazintimber.com",
+    "phone": "Téléphone: +1 (555) 010-0000",
+    "copyright": "© 2025 Amazin Timber. Tous droits réservés."
+  }
+}

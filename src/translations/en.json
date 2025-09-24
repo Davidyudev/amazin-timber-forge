@@ -1,5 +1,178 @@
 {
   "welcome": "Welcome to Amazin Timber",
   "quote": "Request a Quote",
-  "tagline": "Premium timber solutions for global markets"
+  "tagline": "Premium timber solutions for global markets",
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "species": "Species",
+    "process": "Process",
+    "whyUs": "Why Us",
+    "compliance": "Compliance",
+    "certifications": "Certifications",
+    "faq": "FAQ",
+    "catalog": "Catalog"
+  },
+  "hero": {
+    "title": "Global Wood Solutions, Delivered at Scale",
+    "subtitle": "We connect international buyers with reliable mills across Brazil and other leading timber regions—customized specs, container-scale volumes, and coordinated FOB shipments.",
+    "features": {
+      "fcl": "FCL+ Supply",
+      "fob": "FOB Incoterms® 2020",
+      "compliance": "Compliance-Focused"
+    },
+    "cta": {
+      "quote": "Request a Quote",
+      "catalog": "Download 2025 Catalog (PDF)"
+    }
+  },
+  "products": {
+    "title": "Product Portfolio",
+    "subtitle": "Comprehensive wood solutions from tropical hardwoods to engineered products, all delivered in container-scale volumes with FOB coordination.",
+    "items": {
+      "decking": {
+        "title": "Solid Decking & Flooring",
+        "description": "Ipe, Cumaru, Jatoba, Garapa, Teak. Container volumes; custom dimensions."
+      },
+      "engineered": {
+        "title": "Engineered Flooring",
+        "description": "Tropical top layer, multi-ply core for stability."
+      },
+      "sawn": {
+        "title": "Sawn Timber",
+        "description": "Tropical and reforested species; raw or processed to specifications."
+      },
+      "plywood": {
+        "title": "Plywood",
+        "description": "Pine, Camphor; WBP options; E0/E1 grades available."
+      },
+      "mdf": {
+        "title": "MDF / MDP / HDF",
+        "description": "Multiple densities and finishes for interior use."
+      },
+      "doors": {
+        "title": "Doors & Frames",
+        "description": "Solid or engineered; fire-resistant options on request."
+      }
+    }
+  },
+  "species": {
+    "title": "Key Species",
+    "tropical": {
+      "title": "Tropical",
+      "description": "Ipe, Cumaru, Jatoba, Garapa, Teak"
+    },
+    "reforested": {
+      "title": "Reforested",
+      "description": "Elliott/Taeda Pine, Grandis Eucalyptus"
+    }
+  },
+  "process": {
+    "title": "How It Works",
+    "subtitle": "Simple, transparent process from specification to FOB delivery",
+    "steps": {
+      "1": {
+        "title": "Send Specifications",
+        "description": "Send specs and volume (minimum: 1 FCL)"
+      },
+      "2": {
+        "title": "Receive Quote",
+        "description": "Receive USD FOB quote (Incoterms 2020)"
+      },
+      "3": {
+        "title": "Confirm & Pay",
+        "description": "Confirm and pay (CAD / T/T against B/L)"
+      },
+      "4": {
+        "title": "Quality Control",
+        "description": "Production and QC (optional SGS / Bureau Veritas)"
+      },
+      "5": {
+        "title": "FOB Shipment",
+        "description": "Export documentation and FOB shipment"
+      }
+    },
+    "cta": "Start Your Order"
+  },
+  "whyUs": {
+    "title": "Why Amazin Timber",
+    "points": [
+      "Global partner for high-quality wood product supply",
+      "Container-scale solutions (FCL+)",
+      "FOB pricing and export coordination",
+      "Third-party quality control available (SGS / Bureau Veritas)",
+      "Certifications available on request (FSC®, PEFC)"
+    ]
+  },
+  "certifications": {
+    "title": "Certifications & Partners",
+    "subtitle": "Quality assurance through trusted accreditation bodies"
+  },
+  "about": {
+    "title": "About Amazin Timber",
+    "description": "Amazin Timber connects buyers with reliable mills to ensure fit-for-purpose wood products at container scale. Through our network of suppliers in Brazil and beyond, we guarantee specification compliance, timelines, and factory-level pricing with coordination of every step until vessel departure."
+  },
+  "catalog": {
+    "title": "Product Catalog 2025",
+    "subtitle": "Download our comprehensive catalog featuring specifications, grades, and availability for all product categories.",
+    "cta": "Download Catalog (PDF)"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": {
+      "minimum": {
+        "question": "What is the minimum order quantity?",
+        "answer": "One full container (1 FCL)."
+      },
+      "incoterms": {
+        "question": "What Incoterms do you use?",
+        "answer": "FOB (Incoterms® 2020)."
+      },
+      "payment": {
+        "question": "What are the payment terms?",
+        "answer": "CAD or T/T against B/L."
+      },
+      "quality": {
+        "question": "Do you offer third-party quality control?",
+        "answer": "Yes — SGS or Bureau Veritas on request."
+      },
+      "certified": {
+        "question": "Are certified materials available?",
+        "answer": "FSC®/PEFC availability depends on product and mill."
+      },
+      "regions": {
+        "question": "What regions do you serve?",
+        "answer": "Primarily Brazil; other regions based on availability."
+      }
+    }
+  },
+  "quote": {
+    "title": "Request a Quote",
+    "subtitle": "Get a custom FOB quote for your wood requirements. Minimum order: 1 FCL.",
+    "form": {
+      "companyName": "Company Name",
+      "contactName": "Contact Name",
+      "email": "Business Email",
+      "phone": "Phone / WhatsApp",
+      "location": "Country & City",
+      "website": "Website",
+      "productCategories": "Product Category (select all that apply)",
+      "products": {
+        "decking": "Decking",
+        "engineered": "Engineered",
+        "sawn": "Sawn",
+        "plywood": "Plywood",
+        "mdf": "MDF / MDP / HDF",
+        "doors": "Doors",
+        "other": "Other"
+      },
+      "submit": "Submit Quote Request"
+    }
+  },
+  "footer": {
+    "tagline": "Global wood solutions, delivered at scale",
+    "email": "Email: sales@amazintimber.com",
+    "phone": "Phone: +1 (555) 010-0000",
+    "copyright": "© 2025 Amazin Timber. All rights reserved."
+  }
 }

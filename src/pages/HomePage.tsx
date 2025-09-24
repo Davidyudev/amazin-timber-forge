@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 const HomePage = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const controls = useAnimation();
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     controls.start({
@@ -25,12 +25,50 @@ const HomePage = () => {
     <div className="min-h-screen flex flex-col">
       {/* Language Switcher */}
       <div className="fixed top-4 right-4 z-50">
-        <button 
-          onClick={() => i18n.changeLanguage(i18n.language === 'ar' ? 'en' : 'ar')}
-          className="bg-white/10 backdrop-blur-sm text-white px-3 py-2 rounded-lg text-sm hover:bg-white/20 transition-all duration-200"
-        >
-          {i18n.language === 'ar' ? 'English' : 'العربية'}
-        </button>
+        <div className="relative group">
+          {/* Globe Icon */}
+          <div className="bg-white/10 backdrop-blur-sm text-white p-2 rounded shadow-lg flex items-center justify-center">
+            <img 
+              src="/assets/globe-language-svgrepo-com.svg" 
+              alt="Language" 
+              className="w-4 h-4 filter brightness-0 invert"
+            />
+          </div>
+          {/* Language Abbreviation Box - Positioned absolutely below the globe */}
+          <div className="absolute top-full left-0 right-0 mt-1 bg-white/10 backdrop-blur-sm text-white px-2.5 py-1.5 rounded text-xs font-medium shadow-lg text-center flex items-center justify-center">
+            {i18n.language === 'en' ? 'EN' : 
+             i18n.language === 'ar' ? 'عربي' : 
+             i18n.language === 'fr' ? 'FR' : 'ES'}
+          </div>
+          <div className="absolute right-1/2 transform translate-x-1/2 mt-2 w-20 bg-white rounded-md shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div className="py-1">
+              <button
+                onClick={() => i18n.changeLanguage('en')}
+                className={`block w-full text-left px-3 py-1 text-xs hover:bg-gray-100 ${i18n.language === 'en' ? 'bg-primary text-white' : 'text-gray-700'}`}
+              >
+                EN
+              </button>
+              <button
+                onClick={() => i18n.changeLanguage('ar')}
+                className={`block w-full text-left px-3 py-1 text-xs hover:bg-gray-100 ${i18n.language === 'ar' ? 'bg-primary text-white' : 'text-gray-700'}`}
+              >
+                عربي
+              </button>
+              <button
+                onClick={() => i18n.changeLanguage('fr')}
+                className={`block w-full text-left px-3 py-1 text-xs hover:bg-gray-100 ${i18n.language === 'fr' ? 'bg-primary text-white' : 'text-gray-700'}`}
+              >
+                FR
+              </button>
+              <button
+                onClick={() => i18n.changeLanguage('es')}
+                className={`block w-full text-left px-3 py-1 text-xs hover:bg-gray-100 ${i18n.language === 'es' ? 'bg-primary text-white' : 'text-gray-700'}`}
+              >
+                ES
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Navigation */}
@@ -49,14 +87,14 @@ const HomePage = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               {[
-                { label: "Home", href: "#home" },
-                { label: "Products", href: "#products" },
-                { label: "Species", href: "#species" },
-                { label: "Process", href: "#process" },
-                { label: "Why Us", href: "#why-us" },
-                { label: "Certifications", href: "#certifications" },
-                { label: "FAQ", href: "#faq" },
-                { label: "Catalog", href: "#catalog" },
+                { key: "home", href: "#home" },
+                { key: "products", href: "#products" },
+                { key: "species", href: "#species" },
+                { key: "process", href: "#process" },
+                { key: "whyUs", href: "#why-us" },
+                { key: "certifications", href: "#certifications" },
+                { key: "faq", href: "#faq" },
+                { key: "catalog", href: "#catalog" },
               ].map((item) => (
                 <HashLink 
                   key={item.href}
@@ -64,7 +102,7 @@ const HomePage = () => {
                   smooth
                   className="text-white hover:text-brand-offwhite transition-colors"
                 >
-                  {item.label}
+                  {t(`nav.${item.key}`)}
                 </HashLink>
               ))}
               <Button 
@@ -73,7 +111,7 @@ const HomePage = () => {
                 className="bg-white text-brand-green hover:bg-brand-offwhite px-8 py-4 rounded-lg font-medium"
                 asChild
               >
-                <HashLink to="#quote" smooth>Request Quote</HashLink>
+                <HashLink to="#quote" smooth>{t("quote")}</HashLink>
               </Button>
             </div>
 
@@ -94,14 +132,14 @@ const HomePage = () => {
             <div className="md:hidden bg-brand-green border-t border-brand-green-700">
               <div className="px-2 pt-2 pb-3 space-y-1">
                 {[
-                  { label: "Home", href: "#home" },
-                  { label: "Products", href: "#products" },
-                  { label: "Species", href: "#species" },
-                  { label: "Process", href: "#process" },
-                  { label: "Why Us", href: "#why-us" },
-                  { label: "Certifications", href: "#certifications" },
-                  { label: "FAQ", href: "#faq" },
-                  { label: "Catalog", href: "#catalog" },
+                  { key: "home", href: "#home" },
+                  { key: "products", href: "#products" },
+                  { key: "species", href: "#species" },
+                  { key: "process", href: "#process" },
+                  { key: "whyUs", href: "#why-us" },
+                  { key: "certifications", href: "#certifications" },
+                  { key: "faq", href: "#faq" },
+                  { key: "catalog", href: "#catalog" },
                 ].map((item) => (
                   <HashLink 
                     key={item.href}
@@ -110,7 +148,7 @@ const HomePage = () => {
                     onClick={() => setMobileMenuOpen(false)}
                     className="block px-3 py-2 text-white hover:text-brand-offwhite"
                   >
-                    {item.label}
+                    {t(`nav.${item.key}`)}
                   </HashLink>
                 ))}
                 <HashLink 
@@ -119,7 +157,7 @@ const HomePage = () => {
                   onClick={() => setMobileMenuOpen(false)}
                   className="block px-3 py-2 bg-white text-brand-green hover:bg-brand-offwhite text-center rounded-lg mx-3 mt-2"
                 >
-                  Request Quote
+                  {t("quote")}
                 </HashLink>
               </div>
             </div>
@@ -136,7 +174,7 @@ const HomePage = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={controls}
             >
-              Global Wood Solutions, Delivered at Scale
+              {t("hero.title")}
             </motion.h1>
             <motion.p 
               className="text-xl md:text-2xl text-white/90 mb-8"
@@ -144,7 +182,7 @@ const HomePage = () => {
               animate={controls}
               transition={{ delay: 0.2 }}
             >
-              We connect international buyers with reliable mills across Brazil and other leading timber regions—customized specs, container-scale volumes, and coordinated FOB shipments.
+              {t("hero.subtitle")}
             </motion.p>
             <motion.div 
               className="flex flex-wrap justify-center gap-4 mb-8"
@@ -152,7 +190,11 @@ const HomePage = () => {
               animate={controls}
               transition={{ delay: 0.4 }}
             >
-              {["FCL+ Supply", "FOB Incoterms® 2020", "Compliance-Focused"].map((chip) => (
+              {[
+                t("hero.features.fcl"),
+                t("hero.features.fob"),
+                t("hero.features.compliance")
+              ].map((chip) => (
                 <span 
                   key={chip}
                   className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium"
@@ -173,7 +215,7 @@ const HomePage = () => {
                 className="bg-white text-brand-green hover:bg-brand-offwhite px-8 py-4 rounded-lg font-medium"
                 asChild
               >
-                <HashLink to="#quote" smooth>Request a Quote</HashLink>
+                <HashLink to="#quote" smooth>{t("hero.cta.quote")}</HashLink>
               </Button>
               <Button 
                 variant="outline" 
@@ -182,7 +224,7 @@ const HomePage = () => {
                 asChild
               >
                 <a href="/assets/Amazin-Timber-2025-Catalog.pdf" target="_blank" rel="noreferrer">
-                  Download 2025 Catalog (PDF)
+                  {t("hero.cta.catalog")}
                 </a>
               </Button>
             </motion.div>
