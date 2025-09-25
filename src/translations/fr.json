@@ -142,7 +142,7 @@
       },
       "regions": {
         "question": "Quelles régions servez-vous?",
-        "answer": "Principalement le Brésil; autres régions selon la disponibilité."
+        "answer": "Nos services s'étendent mondialement, soutenant les clients sur tous les continents avec des solutions de commerce international transparentes."
       }
     }
   },
@@ -156,16 +156,8 @@
       "phone": "Téléphone / WhatsApp",
       "location": "Pays et ville",
       "website": "Site web",
-      "productCategories": "Catégorie de produit (sélectionnez tout ce qui s'applique)",
-      "products": {
-        "decking": "Terrasses",
-        "engineered": "D'ingénierie",
-        "sawn": "Scié",
-        "plywood": "Contreplaqué",
-        "mdf": "MDF / MDP / HDF",
-        "doors": "Portes",
-        "other": "Autre"
-      },
+      "productDescription": "Description du produit",
+      "productDescriptionPlaceholder": "Veuillez décrire les produits en bois dont vous avez besoin, y compris les espèces, dimensions, quantités, qualités et toute exigence spécifique...",
       "submit": "Soumettre la demande de devis"
     }
   },

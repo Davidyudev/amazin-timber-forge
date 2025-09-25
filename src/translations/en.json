@@ -142,7 +142,7 @@
       },
       "regions": {
         "question": "What regions do you serve?",
-        "answer": "Primarily Brazil; other regions based on availability."
+        "answer": "Our services extend globally, supporting clients across every continent with seamless international trade solutions."
       }
     }
   },
@@ -156,16 +156,8 @@
       "phone": "Phone / WhatsApp",
       "location": "Country & City",
       "website": "Website",
-      "productCategories": "Product Category (select all that apply)",
-      "products": {
-        "decking": "Decking",
-        "engineered": "Engineered",
-        "sawn": "Sawn",
-        "plywood": "Plywood",
-        "mdf": "MDF / MDP / HDF",
-        "doors": "Doors",
-        "other": "Other"
-      },
+      "productDescription": "Product Description",
+      "productDescriptionPlaceholder": "Please describe the wood products you need, including species, dimensions, quantities, grades, and any specific requirements...",
       "submit": "Submit Quote Request"
     }
   },

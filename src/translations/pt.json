@@ -141,7 +141,7 @@
       },
       "regions": {
         "question": "Quais regiões vocês atendem?",
-        "answer": "Principalmente Brasil; outras regiões baseadas na disponibilidade."
+        "answer": "Nossos serviços se estendem globalmente, apoiando clientes em todos os continentes com soluções de comércio internacional perfeitas."
       }
     }
   },
@@ -155,16 +155,8 @@
       "phone": "Telefone / WhatsApp",
       "location": "País e Cidade",
       "website": "Site",
-      "productCategories": "Categoria de Produto (selecione todas as aplicáveis)",
-      "products": {
-        "decking": "Decking",
-        "engineered": "Engenharia",
-        "sawn": "Serrada",
-        "plywood": "Compensado",
-        "mdf": "MDF / MDP / HDF",
-        "doors": "Portas",
-        "other": "Outro"
-      },
+      "productDescription": "Descrição do Produto",
+      "productDescriptionPlaceholder": "Por favor descreva os produtos de madeira que você precisa, incluindo espécies, dimensões, quantidades, graus e quaisquer requisitos específicos...",
       "submit": "Enviar Solicitação de Orçamento"
     }
   },

@@ -75,6 +75,17 @@
     <!-- React App Mount Point -->
     <div id="root"></div>
     
+    <!-- Hidden form for Netlify detection -->
+    <form name="quote" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="company-name" />
+        <input type="text" name="contact-name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <input type="text" name="location" />
+        <input type="url" name="website" />
+        <textarea name="product-description"></textarea>
+    </form>
+
     <!-- React App Script -->
     <script type="module" src="/src/main.tsx"></script>
 </body>

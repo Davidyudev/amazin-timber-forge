@@ -6,6 +6,12 @@ import { Button } from "@/components/ui/button";
 const Index = () => {
   const { t, i18n, ready } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openFAQ, setOpenFAQ] = useState<string | null>(null);
+
+  // Handle FAQ toggle
+  const toggleFAQ = (key: string) => {
+    setOpenFAQ(openFAQ === key ? null : key);
+  };
 
   // Ensure language synchronization
   useEffect(() => {
@@ -169,9 +175,9 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center bg-brand-green hero-section">
+      <section id="home" className="min-h-screen bg-brand-green hero-section flex flex-col justify-center">
         <div className="section-container">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center pt-16 sm:pt-20 md:pt-24 pb-16">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               {t("hero.title")}
             </h1>
@@ -386,12 +392,19 @@ const Index = () => {
           <div className="max-w-3xl mx-auto space-y-4">
             {Object.entries(t("faq.questions", { returnObjects: true })).map(([key, qa]: [string, any]) => (
               <div key={key} className="border border-border rounded-lg">
-                <button className="faq-question w-full text-left px-6 py-4 font-semibold text-foreground hover:bg-brand-offwhite transition-colors">
-                  {qa.question}
-                  <span className="faq-icon float-right">+</span>
+                <button 
+                  onClick={() => toggleFAQ(key)}
+                  className="faq-question w-full text-left px-6 py-4 font-semibold text-foreground hover:bg-brand-offwhite transition-colors flex items-center justify-between"
+                >
+                  <span>{qa.question}</span>
+                  <span className={`faq-icon transition-transform duration-200 ${openFAQ === key ? 'rotate-45' : ''}`}>
+                    +
+                  </span>
                 </button>
-                <div className="faq-answer hidden px-6 pb-4">
-                  <p className="text-muted">{qa.answer}</p>
+                <div className={`faq-answer px-6 pb-4 transition-all duration-300 overflow-hidden ${
+                  openFAQ === key ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                }`}>
+                  <p className="text-muted pt-2">{qa.answer}</p>
                 </div>
               </div>
             ))}
@@ -409,7 +422,7 @@ const Index = () => {
             </p>
           </div>
           
-          <form name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="./success.html" className="max-w-4xl mx-auto">
+          <form name="quote" method="POST" action="./success.html" className="max-w-4xl mx-auto">
             <input type="hidden" name="form-name" value="quote" />
             <p className="hidden">
               <label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -443,15 +456,15 @@ const Index = () => {
             </div>
             
             <div className="mb-6">
-              <label className="block text-sm font-medium text-foreground mb-3">{t("quote.form.productCategories")}</label>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                {Object.entries(t("quote.form.products", { returnObjects: true })).map(([key, label]: [string, string]) => (
-                  <label key={key} className="flex items-center">
-                    <input type="checkbox" name="products[]" value={key} className="form-checkbox mr-2" />
-                    <span className="text-sm">{label}</span>
-                  </label>
-                ))}
-              </div>
+              <label htmlFor="product-description" className="block text-sm font-medium text-foreground mb-2">{t("quote.form.productDescription")} *</label>
+              <textarea 
+                id="product-description" 
+                name="product-description" 
+                required 
+                rows={4}
+                placeholder={t("quote.form.productDescriptionPlaceholder")}
+                className="form-textarea"
+              />
             </div>
             
             <div className="text-center">
