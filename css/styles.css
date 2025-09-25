@@ -161,7 +161,7 @@ body {
 /* Utility Classes */
 .container {
   max-width: var(--container-max);
-  margin: 0 auto;
+  margin:   80px auto;
   padding: 0 1rem;
 }
 

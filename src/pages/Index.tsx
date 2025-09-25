@@ -1,11 +1,60 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
 import { HashLink } from "react-router-hash-link";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n, ready } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Ensure language synchronization
+  useEffect(() => {
+    console.log('Index - Setting up language listeners');
+    console.log('Index - Current language:', i18n.language);
+    console.log('Index - localStorage language:', localStorage.getItem('i18nextLng'));
+    
+    // Check if localStorage has a different language than current
+    const savedLanguage = localStorage.getItem('i18nextLng');
+    if (savedLanguage && savedLanguage !== i18n.language) {
+      console.log('Index - Found saved language in localStorage:', savedLanguage, 'but current is:', i18n.language);
+      console.log('Index - Changing language to match localStorage');
+      i18n.changeLanguage(savedLanguage);
+    }
+    
+    // Listen for custom language change events
+    const handleCustomLanguageChange = (event: CustomEvent) => {
+      console.log('Index - Received custom language change event:', event.detail.language);
+      const newLanguage = event.detail.language;
+      if (newLanguage !== i18n.language) {
+        console.log('Index - Changing language from', i18n.language, 'to', newLanguage);
+        i18n.changeLanguage(newLanguage);
+      }
+    };
+    
+    // Listen for i18n language changes
+    const handleI18nLanguageChange = () => {
+      console.log('Index - i18n language changed to:', i18n.language);
+    };
+    
+    window.addEventListener('languageChanged', handleCustomLanguageChange as EventListener);
+    i18n.on('languageChanged', handleI18nLanguageChange);
+    
+    return () => {
+      console.log('Index - Cleaning up language listeners');
+      window.removeEventListener('languageChanged', handleCustomLanguageChange as EventListener);
+      i18n.off('languageChanged', handleI18nLanguageChange);
+    };
+  }, [i18n]);
+
+  // Don't render until i18n is ready
+  if (!ready) {
+    return <div className="min-h-screen flex items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-brand-green mx-auto mb-4"></div>
+        <p className="text-gray-600">Loading...</p>
+      </div>
+    </div>;
+  }
 
   return (
     <div className="min-h-screen">
@@ -15,11 +64,13 @@ const Index = () => {
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <img 
-                src="/assets/logo_horizontal.png" 
-                alt="Amazin Timber" 
-                className="h-8 sm:h-9 md:h-11 lg:h-12 xl:h-13 w-auto transition-all duration-200"
-              />
+              <HashLink to="#home" smooth>
+                <img 
+                  src="/assets/logo_horizontal.png" 
+                  alt="Amazin Timber" 
+                  className="h-8 sm:h-9 md:h-11 lg:h-12 xl:h-13 w-auto transition-all duration-200 cursor-pointer hover:opacity-90"
+                />
+              </HashLink>
             </div>
 
             {/* Desktop Navigation */}
@@ -267,18 +318,14 @@ const Index = () => {
       {/* Compliance Summary Section */}
       <section id="compliance-summary" className="section-padding bg-brand-offwhite">
         <div className="section-container text-center">
-          <h2 className="text-h2 mb-12">Our Commitment to Legal & Responsible Timber</h2>
+          <h2 className="text-h2 mb-12">{t("compliance.summary.title")}</h2>
           <p className="text-body mb-6">
-            At Amazin Timber, we ensure that every product respects the highest legal and ethical
-            standards. Our supply chain complies with international regulations such as the
-            <strong> EUDR (EU Deforestation Regulation)</strong> and the <strong>U.S. Lacey Act</strong>,
-            guaranteeing that our timber is sourced responsibly and sustainably.
+            {t("compliance.summary.description1")}
           </p>
           <p className="text-body mb-12">
-            From risk assessments and supplier audits to full traceability, we take every step to
-            protect forests, the environment, and local communities.
+            {t("compliance.summary.description2")}
           </p>
-          <a href="/compliance.html" className="btn-primary">Read Our Full Policy</a>
+          <a href="/compliance" className="btn-primary">{t("compliance.summary.button")}</a>
         </div>
       </section>
 

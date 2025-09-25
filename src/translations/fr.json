@@ -169,6 +169,46 @@
       "submit": "Soumettre la demande de devis"
     }
   },
+  "compliance": {
+    "title": "Politique de Conformité",
+    "subtitle": "Notre engagement envers des pratiques d'approvisionnement en bois légales, responsables et durables",
+    "mainTitle": "Légalité, Responsabilité et Diligence Raisonnable dans Notre Chaîne d'Approvisionnement",
+    "introduction": "Chez Amazin Timber, nous nous engageons pleinement et sans condition à opérer en conformité avec toutes les lois, normes et réglementations applicables qui visent à protéger les ressources forestières, l'environnement et les droits de l'homme. Deux des réglementations internationales les plus importantes qui guident nos processus sont l'EUDR (Règlement de l'Union Européenne sur la Déforestation) et la Loi Lacey des États-Unis.",
+    "eudr": {
+      "title": "EUDR (Règlement de l'Union Européenne sur la Déforestation)",
+      "description": "L'EUDR exige que les opérateurs et commerçants qui placent des produits sur le marché de l'UE s'assurent que ces produits ne contribuent pas à la déforestation ou à la dégradation des forêts. Cela implique une diligence raisonnable efficace dans toute la chaîne d'approvisionnement : comprendre l'origine du bois, les conditions d'utilisation des terres, et vérifier la légalité de la récolte, du transport et de la transformation. Nous mettons en œuvre des procédures robustes pour vérifier l'origine légale et durable, y compris des cartes, des certifications, des audits et une traçabilité documentée—garantissant qu'aucun de nos produits ne viole les exigences de l'EUDR."
+    },
+    "laceyAct": {
+      "title": "Loi Lacey (États-Unis)",
+      "description": "La Loi Lacey interdit le commerce de plantes et de produits végétaux (y compris le bois) qui sont récoltés ou transportés illégalement. Lorsque nous vendons ou exportons vers les États-Unis—ou lorsque nos partenaires le font—nous nous assurons que tous les matériaux respectent les exigences légales d'origine, de documentation et de certification. Nous maintenons des dossiers complets démontrant la conformité aux lois forestières des pays d'origine, empêchant ainsi le bois illégal d'entrer dans la chaîne d'approvisionnement."
+    },
+    "dueDiligence": {
+      "title": "Notre Politique de Diligence Raisonnable et de Chaîne d'Approvisionnement",
+      "description": "Pour garantir que tous les envois respectent les normes légales et éthiques, nous nous assurons :",
+      "points": {
+        "riskAssessment": "Évaluation des risques : avant de sélectionner les fournisseurs, nous évaluons les risques de récolte illégale, de déforestation ou de violations des droits de l'homme dans les zones d'origine.",
+        "documentation": "Documentation obligatoire : nous exigeons que tous les fournisseurs fournissent des licences, des certifications forestières reconnues internationalement (par exemple, FSC, PEFC) ou équivalents, des autorisations légales d'extraction, de transport et de transformation, des cartes de localisation et de vérification d'utilisation des terres, entre autres.",
+        "audits": "Audits et vérifications indépendantes : si nécessaire, nous effectuons des audits sur le terrain ou engageons des entités indépendantes pour vérifier l'exactitude des informations et la conformité légale à la source.",
+        "traceability": "Traçabilité : du point de récolte à l'envoi final, nous maintenons une traçabilité documentaire claire afin que le chemin du bois puisse être suivi à tout moment.",
+        "continuousReview": "Révision continue : nos procédures internes sont périodiquement mises à jour pour incorporer les meilleures pratiques, se conformer à la législation évolutive et assurer des améliorations continues en matière de durabilité et de transparence."
+      }
+    },
+    "sustainability": {
+      "title": "Engagement envers la Durabilité et l'Éthique des Affaires",
+      "description": "Chez Amazin Timber, nous croyons que la responsabilité environnementale et sociale est inséparable des opérations commerciales réussies. Notre engagement va au-delà de la conformité légale : nous nous efforçons de dépasser les attentes en nous approvisionnant en bois certifié et en soutenant des initiatives qui favorisent la conservation, la protection de la biodiversité et les avantages pour les communautés locales. Notre objectif est de nous assurer que chaque produit qui vous atteint a traversé une chaîne d'approvisionnement qui respecte la planète, les gens et les écosystèmes."
+    },
+    "contact": {
+      "title": "Des questions sur nos pratiques de conformité ?",
+      "description": "Nous nous engageons envers la transparence et sommes heureux de discuter de nos procédures de conformité avec les partenaires et clients potentiels.",
+      "button": "Nous Contacter"
+    },
+    "summary": {
+      "title": "Notre Engagement envers le Bois Légal et Responsable",
+      "description1": "Chez Amazin Timber, nous nous assurons que chaque produit respecte les plus hauts standards légaux et éthiques. Notre chaîne d'approvisionnement se conforme aux réglementations internationales telles que l'EUDR (Règlement de l'Union Européenne sur la Déforestation) et la Loi Lacey des États-Unis, garantissant que notre bois est sourcé de manière responsable et durable.",
+      "description2": "Des évaluations de risques et audits de fournisseurs à la traçabilité complète, nous prenons chaque mesure pour protéger les forêts, l'environnement et les communautés locales.",
+      "button": "Lire Notre Politique Complète"
+    }
+  },
   "footer": {
     "tagline": "Solutions de bois mondiales, livrées à grande échelle",
     "email": "Email: sales@amazintimber.com",

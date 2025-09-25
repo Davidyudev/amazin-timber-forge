@@ -38,7 +38,8 @@ const HomePage = () => {
           <div className="absolute top-full left-0 right-0 mt-1 bg-white/10 backdrop-blur-sm text-white px-2.5 py-1.5 rounded text-xs font-medium shadow-lg text-center flex items-center justify-center">
             {i18n.language === 'en' ? 'EN' : 
              i18n.language === 'ar' ? 'عربي' : 
-             i18n.language === 'fr' ? 'FR' : 'ES'}
+             i18n.language === 'fr' ? 'FR' : 
+             i18n.language === 'es' ? 'ES' : 'PT'}
           </div>
           <div className="absolute right-1/2 transform translate-x-1/2 mt-2 w-20 bg-white rounded-md shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
             <div className="py-1">
@@ -65,6 +66,12 @@ const HomePage = () => {
                 className={`block w-full text-left px-3 py-1 text-xs hover:bg-gray-100 ${i18n.language === 'es' ? 'bg-primary text-white' : 'text-gray-700'}`}
               >
                 ES
+              </button>
+              <button
+                onClick={() => i18n.changeLanguage('pt')}
+                className={`block w-full text-left px-3 py-1 text-xs hover:bg-gray-100 ${i18n.language === 'pt' ? 'bg-primary text-white' : 'text-gray-700'}`}
+              >
+                PT
               </button>
             </div>
           </div>
@@ -166,24 +173,24 @@ const HomePage = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center bg-brand-green pt-20">
+      <section id="home" className="min-h-screen flex items-center bg-brand-green" style={{ marginTop: '80px' }}>
         <div className="section-container">
           <div className="max-w-3xl mx-auto text-center">
             <motion.h1 
               className={`font-bold text-white mb-6 ${
                 i18n.language === 'fr' || i18n.language === 'es' 
-                  ? 'text-2xl md:text-3xl lg:text-4xl' 
+                  ? 'text-lg md:text-xl lg:text-2xl' 
                   : 'text-5xl md:text-6xl'
               }`}
               initial={{ opacity: 0, y: 20 }}
               animate={controls}
             >
-              {t("hero.title")}
+              {t("hero.title")} - TEST CHANGE
             </motion.h1>
             <motion.p 
               className={`text-white/90 mb-8 ${
                 i18n.language === 'fr' || i18n.language === 'es' 
-                  ? 'text-base md:text-lg' 
+                  ? 'text-sm md:text-base' 
                   : 'text-xl md:text-2xl'
               }`}
               initial={{ opacity: 0, y: 20 }}

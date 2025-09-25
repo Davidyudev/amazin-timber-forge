@@ -1,6 +1,5 @@
 {
   "welcome": "Bienvenido a Amazin Timber",
-  "quote": "Solicitar cotización",
   "tagline": "Soluciones de madera premium para mercados globales",
   "nav": {
     "home": "Inicio",
@@ -167,6 +166,46 @@
         "other": "Otro"
       },
       "submit": "Enviar solicitud de cotización"
+    }
+  },
+  "compliance": {
+    "title": "Política de Cumplimiento",
+    "subtitle": "Nuestro compromiso con prácticas de abastecimiento de madera legales, responsables y sostenibles",
+    "mainTitle": "Legalidad, Responsabilidad y Debida Diligencia en Nuestra Cadena de Suministro",
+    "introduction": "En Amazin Timber, estamos completamente e incondicionalmente comprometidos a operar en cumplimiento con todas las leyes, estándares y regulaciones aplicables que tienen como objetivo proteger los recursos forestales, el medio ambiente y los derechos humanos. Dos de las regulaciones internacionales más importantes que guían nuestros procesos son el EUDR (Reglamento de Deforestación de la Unión Europea) y la Ley Lacey de Estados Unidos.",
+    "eudr": {
+      "title": "EUDR (Reglamento de Deforestación de la Unión Europea)",
+      "description": "El EUDR requiere que los operadores y comerciantes que colocan productos en el mercado de la UE se aseguren de que estos productos no contribuyan a la deforestación o degradación forestal. Esto implica una debida diligencia efectiva en toda la cadena de suministro: entender el origen de la madera, las condiciones de uso de la tierra, y verificar la legalidad de la cosecha, transporte y procesamiento. Implementamos procedimientos robustos para verificar el origen legal y sostenible, incluyendo mapas, certificaciones, auditorías y trazabilidad documentada—asegurando que ninguno de nuestros productos viole los requisitos del EUDR."
+    },
+    "laceyAct": {
+      "title": "Ley Lacey (Estados Unidos)",
+      "description": "La Ley Lacey prohíbe el comercio de plantas y productos vegetales (incluyendo madera) que son cosechados o transportados ilegalmente. Cuando vendemos o exportamos a Estados Unidos—o cuando nuestros socios lo hacen—nos aseguramos de que todos los materiales cumplan con los requisitos legales de origen, documentación y certificación. Mantenemos registros completos que demuestran el cumplimiento con las leyes forestales de los países de origen, previniendo así que la madera ilegal entre en la cadena de suministro."
+    },
+    "dueDiligence": {
+      "title": "Nuestra Política de Debida Diligencia y Cadena de Suministro",
+      "description": "Para garantizar que todos los envíos respeten los estándares legales y éticos, nos aseguramos:",
+      "points": {
+        "riskAssessment": "Evaluación de riesgos: antes de seleccionar proveedores, evaluamos riesgos de cosecha ilegal, deforestación o violaciones de derechos humanos en las áreas de origen.",
+        "documentation": "Documentación obligatoria: requerimos que todos los proveedores proporcionen licencias, certificaciones forestales reconocidas internacionalmente (por ejemplo, FSC, PEFC) o equivalentes, autorizaciones legales de extracción, transporte y procesamiento, mapas de ubicación y verificación de uso de la tierra, entre otros.",
+        "audits": "Auditorías y verificaciones independientes: cuando es necesario, realizamos auditorías de campo o contratamos entidades independientes para verificar la exactitud de la información y el cumplimiento legal en la fuente.",
+        "traceability": "Trazabilidad: desde el punto de cosecha hasta el envío final, mantenemos una trazabilidad documental clara para que el camino de la madera pueda ser rastreado en cualquier etapa.",
+        "continuousReview": "Revisión continua: nuestros procedimientos internos se actualizan periódicamente para incorporar mejores prácticas, cumplir con la legislación en evolución y asegurar mejoras continuas en sostenibilidad y transparencia."
+      }
+    },
+    "sustainability": {
+      "title": "Compromiso con la Sostenibilidad y Ética Empresarial",
+      "description": "En Amazin Timber, creemos que la responsabilidad ambiental y social es inseparable de las operaciones comerciales exitosas. Nuestro compromiso va más allá del cumplimiento legal: nos esforzamos por superar las expectativas abasteciéndonos de madera certificada y apoyando iniciativas que fomentan la conservación, protección de la biodiversidad y beneficios para las comunidades locales. Nuestro objetivo es asegurar que cada producto que llega a usted ha pasado por una cadena de suministro que respeta el planeta, las personas y los ecosistemas."
+    },
+    "contact": {
+      "title": "¿Preguntas sobre nuestras prácticas de cumplimiento?",
+      "description": "Estamos comprometidos con la transparencia y estamos felices de discutir nuestros procedimientos de cumplimiento con socios y clientes potenciales.",
+      "button": "Contáctanos"
+    },
+    "summary": {
+      "title": "Nuestro Compromiso con la Madera Legal y Responsable",
+      "description1": "En Amazin Timber, nos aseguramos de que cada producto respete los más altos estándares legales y éticos. Nuestra cadena de suministro cumple con regulaciones internacionales como el EUDR (Reglamento de Deforestación de la Unión Europea) y la Ley Lacey de Estados Unidos, garantizando que nuestra madera se obtenga de manera responsable y sostenible.",
+      "description2": "Desde evaluaciones de riesgo y auditorías de proveedores hasta trazabilidad completa, tomamos cada paso para proteger los bosques, el medio ambiente y las comunidades locales.",
+      "button": "Leer Nuestra Política Completa"
     }
   },
   "footer": {

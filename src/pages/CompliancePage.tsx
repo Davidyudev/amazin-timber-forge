@@ -1,11 +1,60 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
-import { HashLink } from "react-router-hash-link";
+import { HashLink, Link } from "react-router-hash-link";
 import { Button } from "@/components/ui/button";
 
 const CompliancePage = () => {
-  const { t } = useTranslation();
+  const { t, i18n, ready } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Ensure language synchronization
+  useEffect(() => {
+    console.log('CompliancePage - Setting up language listeners');
+    console.log('CompliancePage - Current language:', i18n.language);
+    console.log('CompliancePage - localStorage language:', localStorage.getItem('i18nextLng'));
+    
+    // Check if localStorage has a different language than current
+    const savedLanguage = localStorage.getItem('i18nextLng');
+    if (savedLanguage && savedLanguage !== i18n.language) {
+      console.log('CompliancePage - Found saved language in localStorage:', savedLanguage, 'but current is:', i18n.language);
+      console.log('CompliancePage - Changing language to match localStorage');
+      i18n.changeLanguage(savedLanguage);
+    }
+    
+    // Listen for custom language change events
+    const handleCustomLanguageChange = (event: CustomEvent) => {
+      console.log('CompliancePage - Received custom language change event:', event.detail.language);
+      const newLanguage = event.detail.language;
+      if (newLanguage !== i18n.language) {
+        console.log('CompliancePage - Changing language from', i18n.language, 'to', newLanguage);
+        i18n.changeLanguage(newLanguage);
+      }
+    };
+    
+    // Listen for i18n language changes
+    const handleI18nLanguageChange = () => {
+      console.log('CompliancePage - i18n language changed to:', i18n.language);
+    };
+    
+    window.addEventListener('languageChanged', handleCustomLanguageChange as EventListener);
+    i18n.on('languageChanged', handleI18nLanguageChange);
+    
+    return () => {
+      console.log('CompliancePage - Cleaning up language listeners');
+      window.removeEventListener('languageChanged', handleCustomLanguageChange as EventListener);
+      i18n.off('languageChanged', handleI18nLanguageChange);
+    };
+  }, [i18n]);
+
+  // Don't render until i18n is ready
+  if (!ready) {
+    return <div className="min-h-screen flex items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-brand-green mx-auto mb-4"></div>
+        <p className="text-gray-600">Loading...</p>
+      </div>
+    </div>;
+  }
 
   return (
     <div className="min-h-screen">
@@ -36,13 +85,14 @@ const CompliancePage = () => {
                 { key: "faq", href: "/#faq" },
                 { key: "catalog", href: "/#catalog" },
               ].map((item) => (
-                <a 
+                <HashLink 
                   key={item.href}
-                  href={item.href}
+                  to={item.href}
+                  smooth
                   className="text-white hover:text-brand-offwhite transition-colors text-sm xl:text-base whitespace-nowrap"
                 >
                   {t(`nav.${item.key}`)}
-                </a>
+                </HashLink>
               ))}
             </div>
 
@@ -84,14 +134,15 @@ const CompliancePage = () => {
                   { key: "faq", href: "/#faq" },
                   { key: "catalog", href: "/#catalog" },
                 ].map((item) => (
-                  <a 
+                  <HashLink 
                     key={item.href}
-                    href={item.href}
+                    to={item.href}
+                    smooth
                     onClick={() => setMobileMenuOpen(false)}
                     className="block px-3 py-2 text-white hover:text-brand-offwhite"
                   >
                     {t(`nav.${item.key}`)}
-                  </a>
+                  </HashLink>
                 ))}
                 <HashLink 
                   to="/#quote" 
@@ -111,9 +162,9 @@ const CompliancePage = () => {
         {/* Hero Section */}
         <section className="section-padding bg-brand-green">
           <div className="section-container text-center">
-            <h1 className="text-hero text-white mb-6">Compliance Policy</h1>
+            <h1 className="text-hero text-white mb-6">{t("compliance.title")}</h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Our commitment to legal, responsible, and sustainable timber sourcing practices
+              {t("compliance.subtitle")}
             </p>
           </div>
         </section>
@@ -123,62 +174,62 @@ const CompliancePage = () => {
           <div className="section-container">
             <div className="max-w-4xl mx-auto">
               <div className="prose prose-lg max-w-none">
-                <h2 className="text-h2 text-foreground mb-6">Legality, Responsibility, and Due Diligence in Our Supply Chain</h2>
+                <h2 className="text-h2 text-foreground mb-6">{t("compliance.mainTitle")}</h2>
                 
                 <p className="text-body text-muted mb-6">
-                  At Amazin Timber, we are fully and unconditionally committed to operating in compliance with all applicable laws, standards, and regulations that aim to protect forest resources, the environment, and human rights. Two of the most important international regulations guiding our processes are the EUDR (European Union Deforestation Regulation) and the U.S. Lacey Act.
+                  {t("compliance.introduction")}
                 </p>
 
-                <h3 className="text-xl font-semibold text-foreground mb-4">EUDR (EU Deforestation Regulation)</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-4">{t("compliance.eudr.title")}</h3>
                 <p className="text-body text-muted mb-6">
-                  The EUDR requires operators and traders placing products on the EU market to ensure that these products do not contribute to deforestation or forest degradation. This entails effective due diligence across the entire supply chain: understanding the origin of the timber, land-use conditions, and verifying the legality of harvesting, transport, and processing. We implement robust procedures to verify legal and sustainable origin, including maps, certifications, audits, and documented traceability—ensuring that none of our products violate EUDR requirements.
+                  {t("compliance.eudr.description")}
                 </p>
 
-                <h3 className="text-xl font-semibold text-foreground mb-4">Lacey Act (USA)</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-4">{t("compliance.laceyAct.title")}</h3>
                 <p className="text-body text-muted mb-6">
-                  The Lacey Act prohibits the trade of plants and plant products (including timber) that are harvested or transported illegally. When we sell or export to the U.S.—or when our partners do—we ensure that all materials comply with legal requirements of origin, documentation, and certification. We maintain comprehensive records demonstrating compliance with the forestry laws of the countries of origin, thereby preventing illegal timber from entering the supply chain.
+                  {t("compliance.laceyAct.description")}
                 </p>
 
-                <h3 className="text-xl font-semibold text-foreground mb-4">Our Due Diligence & Supply Chain Policy</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-4">{t("compliance.dueDiligence.title")}</h3>
                 <p className="text-body text-muted mb-4">
-                  To guarantee that all shipments respect legal and ethical standards, we ensure:
+                  {t("compliance.dueDiligence.description")}
                 </p>
                 
                 <ul className="text-body text-muted mb-6 space-y-3">
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2 mr-3"></span>
-                    <span><strong>Risk assessment:</strong> before selecting suppliers, we evaluate risks of illegal harvesting, deforestation, or human rights violations in the areas of origin.</span>
+                    <span>{t("compliance.dueDiligence.points.riskAssessment")}</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2 mr-3"></span>
-                    <span><strong>Mandatory documentation:</strong> we require all suppliers to provide licenses, internationally recognized forest certifications (e.g., FSC, PEFC) or equivalents, legal extraction, transport and processing authorizations, location maps, and land-use verification, among others.</span>
+                    <span>{t("compliance.dueDiligence.points.documentation")}</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2 mr-3"></span>
-                    <span><strong>Audits & independent checks:</strong> where necessary, we conduct field audits or engage independent entities to verify the accuracy of information and legal compliance at the source.</span>
+                    <span>{t("compliance.dueDiligence.points.audits")}</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2 mr-3"></span>
-                    <span><strong>Traceability:</strong> from the point of harvest to the final shipment, we maintain clear documentary traceability so that the timber's path can be tracked at any stage.</span>
+                    <span>{t("compliance.dueDiligence.points.traceability")}</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2 mr-3"></span>
-                    <span><strong>Continuous review:</strong> our internal procedures are periodically updated to incorporate best practices, comply with evolving legislation, and ensure continuous improvements in sustainability and transparency.</span>
+                    <span>{t("compliance.dueDiligence.points.continuousReview")}</span>
                   </li>
                 </ul>
 
-                <h3 className="text-xl font-semibold text-foreground mb-4">Commitment to Sustainability & Business Ethics</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-4">{t("compliance.sustainability.title")}</h3>
                 <p className="text-body text-muted mb-6">
-                  At Amazin Timber, we believe that environmental and social responsibility is inseparable from successful business operations. Our commitment goes beyond legal compliance: we strive to exceed expectations by sourcing certified timber and supporting initiatives that foster conservation, biodiversity protection, and benefits for local communities. Our goal is to ensure that every product reaching you has passed through a supply chain that respects the planet, people, and ecosystems.
+                  {t("compliance.sustainability.description")}
                 </p>
 
                 <div className="bg-brand-offwhite p-6 rounded-lg mt-8">
-                  <h4 className="text-lg font-semibold text-foreground mb-3">Questions about our compliance practices?</h4>
+                  <h4 className="text-lg font-semibold text-foreground mb-3">{t("compliance.contact.title")}</h4>
                   <p className="text-body text-muted mb-4">
-                    We're committed to transparency and are happy to discuss our compliance procedures with potential partners and customers.
+                    {t("compliance.contact.description")}
                   </p>
                   <Button className="btn-primary" asChild>
-                    <HashLink to="/#quote">Contact Us</HashLink>
+                    <HashLink to="/#quote">{t("compliance.contact.button")}</HashLink>
                   </Button>
                 </div>
               </div>

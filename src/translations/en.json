@@ -169,6 +169,46 @@
       "submit": "Submit Quote Request"
     }
   },
+  "compliance": {
+    "title": "Compliance Policy",
+    "subtitle": "Our commitment to legal, responsible, and sustainable timber sourcing practices",
+    "mainTitle": "Legality, Responsibility, and Due Diligence in Our Supply Chain",
+    "introduction": "At Amazin Timber, we are fully and unconditionally committed to operating in compliance with all applicable laws, standards, and regulations that aim to protect forest resources, the environment, and human rights. Two of the most important international regulations guiding our processes are the EUDR (European Union Deforestation Regulation) and the U.S. Lacey Act.",
+    "eudr": {
+      "title": "EUDR (EU Deforestation Regulation)",
+      "description": "The EUDR requires operators and traders placing products on the EU market to ensure that these products do not contribute to deforestation or forest degradation. This entails effective due diligence across the entire supply chain: understanding the origin of the timber, land-use conditions, and verifying the legality of harvesting, transport, and processing. We implement robust procedures to verify legal and sustainable origin, including maps, certifications, audits, and documented traceability—ensuring that none of our products violate EUDR requirements."
+    },
+    "laceyAct": {
+      "title": "Lacey Act (USA)",
+      "description": "The Lacey Act prohibits the trade of plants and plant products (including timber) that are harvested or transported illegally. When we sell or export to the U.S.—or when our partners do—we ensure that all materials comply with legal requirements of origin, documentation, and certification. We maintain comprehensive records demonstrating compliance with the forestry laws of the countries of origin, thereby preventing illegal timber from entering the supply chain."
+    },
+    "dueDiligence": {
+      "title": "Our Due Diligence & Supply Chain Policy",
+      "description": "To guarantee that all shipments respect legal and ethical standards, we ensure:",
+      "points": {
+        "riskAssessment": "Risk assessment: before selecting suppliers, we evaluate risks of illegal harvesting, deforestation, or human rights violations in the areas of origin.",
+        "documentation": "Mandatory documentation: we require all suppliers to provide licenses, internationally recognized forest certifications (e.g., FSC, PEFC) or equivalents, legal extraction, transport and processing authorizations, location maps, and land-use verification, among others.",
+        "audits": "Audits & independent checks: where necessary, we conduct field audits or engage independent entities to verify the accuracy of information and legal compliance at the source.",
+        "traceability": "Traceability: from the point of harvest to the final shipment, we maintain clear documentary traceability so that the timber's path can be tracked at any stage.",
+        "continuousReview": "Continuous review: our internal procedures are periodically updated to incorporate best practices, comply with evolving legislation, and ensure continuous improvements in sustainability and transparency."
+      }
+    },
+    "sustainability": {
+      "title": "Commitment to Sustainability & Business Ethics",
+      "description": "At Amazin Timber, we believe that environmental and social responsibility is inseparable from successful business operations. Our commitment goes beyond legal compliance: we strive to exceed expectations by sourcing certified timber and supporting initiatives that foster conservation, biodiversity protection, and benefits for local communities. Our goal is to ensure that every product reaching you has passed through a supply chain that respects the planet, people, and ecosystems."
+    },
+    "contact": {
+      "title": "Questions about our compliance practices?",
+      "description": "We're committed to transparency and are happy to discuss our compliance procedures with potential partners and customers.",
+      "button": "Contact Us"
+    },
+    "summary": {
+      "title": "Our Commitment to Legal & Responsible Timber",
+      "description1": "At Amazin Timber, we ensure that every product respects the highest legal and ethical standards. Our supply chain complies with international regulations such as the EUDR (EU Deforestation Regulation) and the U.S. Lacey Act, guaranteeing that our timber is sourced responsibly and sustainably.",
+      "description2": "From risk assessments and supplier audits to full traceability, we take every step to protect forests, the environment, and local communities.",
+      "button": "Read Our Full Policy"
+    }
+  },
   "footer": {
     "tagline": "Global wood solutions, delivered at scale",
     "email": "Email: sales@amazintimber.com",

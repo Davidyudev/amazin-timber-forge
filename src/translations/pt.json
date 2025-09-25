@@ -1,0 +1,217 @@
+{
+  "welcome": "Bem-vindo à Amazin Timber",
+  "tagline": "Soluções de madeira premium para mercados globais",
+  "nav": {
+    "home": "Início",
+    "products": "Produtos",
+    "species": "Espécies",
+    "process": "Processo",
+    "whyUs": "Por que nós",
+    "compliance": "Conformidade",
+    "certifications": "Certificações",
+    "faq": "FAQ",
+    "catalog": "Catálogo"
+  },
+  "hero": {
+    "title": "Soluções de Madeira Globais, Entregues em Escala",
+    "subtitle": "Conectamos compradores internacionais com serrarias confiáveis em todo o Brasil e outras regiões madeireiras líderes—especificações personalizadas, volumes em escala de contêineres e remessas FOB coordenadas.",
+    "features": {
+      "fcl": "Fornecimento FCL+",
+      "fob": "FOB Incoterms® 2020",
+      "compliance": "Focado em Conformidade"
+    },
+    "cta": {
+      "quote": "Solicitar Orçamento",
+      "catalog": "Baixar Catálogo 2025 (PDF)"
+    }
+  },
+  "products": {
+    "title": "Portfólio de Produtos",
+    "subtitle": "Soluções de madeira abrangentes desde madeiras tropicais até produtos de engenharia, todos entregues em volumes em escala de contêineres com coordenação FOB.",
+    "items": {
+      "decking": {
+        "title": "Decking e Pisos Sólidos",
+        "description": "Ipe, Cumaru, Jatobá, Garapa, Teca. Volumes de contêineres; dimensões personalizadas."
+      },
+      "engineered": {
+        "title": "Piso de Engenharia",
+        "description": "Camada superior tropical, núcleo multi-lâminas para estabilidade."
+      },
+      "sawn": {
+        "title": "Madeira Serrada",
+        "description": "Espécies tropicais e reflorestadas; bruta ou processada conforme especificações."
+      },
+      "plywood": {
+        "title": "Compensado",
+        "description": "Pinus, Cânfora; opções WBP; graus E0/E1 disponíveis."
+      },
+      "mdf": {
+        "title": "MDF / MDP / HDF",
+        "description": "Múltiplas densidades e acabamentos para uso interno."
+      },
+      "doors": {
+        "title": "Portas e Molduras",
+        "description": "Sólidas ou de engenharia; opções resistentes ao fogo sob demanda."
+      }
+    }
+  },
+  "species": {
+    "title": "Espécies Principais",
+    "tropical": {
+      "title": "Tropical",
+      "description": "Ipe, Cumaru, Jatobá, Garapa, Teca"
+    },
+    "reforested": {
+      "title": "Reflorestado",
+      "description": "Pinus Elliott/Taeda, Eucalipto Grandis"
+    }
+  },
+  "process": {
+    "title": "Como Funciona",
+    "subtitle": "Processo simples e transparente desde especificação até entrega FOB",
+    "steps": {
+      "1": {
+        "title": "Enviar Especificações",
+        "description": "Envie especificações e volume (mínimo: 1 FCL)"
+      },
+      "2": {
+        "title": "Receber Orçamento",
+        "description": "Receba orçamento FOB em USD (Incoterms 2020)"
+      },
+      "3": {
+        "title": "Confirmar e Pagar",
+        "description": "Confirme e pague (CAD / T/T contra B/L)"
+      },
+      "4": {
+        "title": "Controle de Qualidade",
+        "description": "Produção e QC (SGS / Bureau Veritas opcional)"
+      },
+      "5": {
+        "title": "Remessa FOB",
+        "description": "Documentação de exportação e remessa FOB"
+      }
+    },
+    "cta": "Iniciar Seu Pedido"
+  },
+  "whyUs": {
+    "title": "Por que Amazin Timber",
+    "points": [
+      "Parceiro global para fornecimento de produtos de madeira de alta qualidade",
+      "Soluções em escala de contêineres (FCL+)",
+      "Precificação FOB e coordenação de exportação",
+      "Controle de qualidade de terceiros disponível (SGS / Bureau Veritas)",
+      "Certificações disponíveis sob demanda (FSC®, PEFC)"
+    ]
+  },
+  "certifications": {
+    "title": "Certificações e Parceiros",
+    "subtitle": "Garantia de qualidade através de organismos de acreditação confiáveis"
+  },
+  "about": {
+    "title": "Sobre a Amazin Timber",
+    "description": "A Amazin Timber conecta compradores com serrarias confiáveis para garantir produtos de madeira adequados ao propósito em escala de contêineres. Através de nossa rede de fornecedores no Brasil e além, garantimos conformidade com especificações, cronogramas e preços ao nível da fábrica com coordenação de cada etapa até a partida do navio."
+  },
+  "catalog": {
+    "title": "Catálogo de Produtos 2025",
+    "subtitle": "Baixe nosso catálogo abrangente apresentando especificações, graus e disponibilidade para todas as categorias de produtos.",
+    "cta": "Baixar Catálogo (PDF)"
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "questions": {
+      "minimum": {
+        "question": "Qual é a quantidade mínima de pedido?",
+        "answer": "Um contêiner completo (1 FCL)."
+      },
+      "incoterms": {
+        "question": "Quais Incoterms vocês usam?",
+        "answer": "FOB (Incoterms® 2020)."
+      },
+      "payment": {
+        "question": "Quais são os termos de pagamento?",
+        "answer": "CAD ou T/T contra B/L."
+      },
+      "quality": {
+        "question": "Vocês oferecem controle de qualidade de terceiros?",
+        "answer": "Sim — SGS ou Bureau Veritas sob demanda."
+      },
+      "certified": {
+        "question": "Materiais certificados estão disponíveis?",
+        "answer": "Disponibilidade FSC®/PEFC depende do produto e serraria."
+      },
+      "regions": {
+        "question": "Quais regiões vocês atendem?",
+        "answer": "Principalmente Brasil; outras regiões baseadas na disponibilidade."
+      }
+    }
+  },
+  "quote": {
+    "title": "Solicitar Orçamento",
+    "subtitle": "Obtenha um orçamento FOB personalizado para suas necessidades de madeira. Pedido mínimo: 1 FCL.",
+    "form": {
+      "companyName": "Nome da Empresa",
+      "contactName": "Nome do Contato",
+      "email": "Email Comercial",
+      "phone": "Telefone / WhatsApp",
+      "location": "País e Cidade",
+      "website": "Site",
+      "productCategories": "Categoria de Produto (selecione todas as aplicáveis)",
+      "products": {
+        "decking": "Decking",
+        "engineered": "Engenharia",
+        "sawn": "Serrada",
+        "plywood": "Compensado",
+        "mdf": "MDF / MDP / HDF",
+        "doors": "Portas",
+        "other": "Outro"
+      },
+      "submit": "Enviar Solicitação de Orçamento"
+    }
+  },
+  "compliance": {
+    "title": "Política de Conformidade",
+    "subtitle": "Nosso compromisso com práticas de abastecimento de madeira legais, responsáveis e sustentáveis",
+    "mainTitle": "Legalidade, Responsabilidade e Devida Diligência em Nossa Cadeia de Fornecimento",
+    "introduction": "Na Amazin Timber, estamos totalmente e incondicionalmente comprometidos em operar em conformidade com todas as leis, padrões e regulamentações aplicáveis que visam proteger recursos florestais, o meio ambiente e os direitos humanos. Duas das regulamentações internacionais mais importantes que orientam nossos processos são o EUDR (Regulamento de Desmatamento da União Europeia) e a Lei Lacey dos EUA.",
+    "eudr": {
+      "title": "EUDR (Regulamento de Desmatamento da União Europeia)",
+      "description": "O EUDR exige que operadores e comerciantes que colocam produtos no mercado da UE garantam que esses produtos não contribuam para o desmatamento ou degradação florestal. Isso implica devida diligência eficaz em toda a cadeia de fornecimento: entender a origem da madeira, condições de uso da terra e verificar a legalidade da colheita, transporte e processamento. Implementamos procedimentos robustos para verificar origem legal e sustentável, incluindo mapas, certificações, auditorias e rastreabilidade documentada—garantindo que nenhum de nossos produtos viole os requisitos do EUDR."
+    },
+    "laceyAct": {
+      "title": "Lei Lacey (EUA)",
+      "description": "A Lei Lacey proíbe o comércio de plantas e produtos vegetais (incluindo madeira) que são colhidos ou transportados ilegalmente. Quando vendemos ou exportamos para os EUA—ou quando nossos parceiros o fazem—garantimos que todos os materiais atendam aos requisitos legais de origem, documentação e certificação. Mantemos registros abrangentes demonstrando conformidade com as leis florestais dos países de origem, impedindo assim que madeira ilegal entre na cadeia de fornecimento."
+    },
+    "dueDiligence": {
+      "title": "Nossa Política de Devida Diligência e Cadeia de Fornecimento",
+      "description": "Para garantir que todos os embarques respeitem padrões legais e éticos, garantimos:",
+      "points": {
+        "riskAssessment": "Avaliação de riscos: antes de selecionar fornecedores, avaliamos riscos de colheita ilegal, desmatamento ou violações de direitos humanos nas áreas de origem.",
+        "documentation": "Documentação obrigatória: exigimos que todos os fornecedores forneçam licenças, certificações florestais reconhecidas internacionalmente (por exemplo, FSC, PEFC) ou equivalentes, autorizações legais de extração, transporte e processamento, mapas de localização e verificação de uso da terra, entre outros.",
+        "audits": "Auditorias e verificações independentes: quando necessário, realizamos auditorias de campo ou contratamos entidades independentes para verificar a precisão das informações e conformidade legal na fonte.",
+        "traceability": "Rastreabilidade: do ponto de colheita até o embarque final, mantemos rastreabilidade documental clara para que o caminho da madeira possa ser rastreado em qualquer estágio.",
+        "continuousReview": "Revisão contínua: nossos procedimentos internos são atualizados periodicamente para incorporar melhores práticas, cumprir legislação em evolução e garantir melhorias contínuas em sustentabilidade e transparência."
+      }
+    },
+    "sustainability": {
+      "title": "Compromisso com Sustentabilidade e Ética Empresarial",
+      "description": "Na Amazin Timber, acreditamos que a responsabilidade ambiental e social é inseparável das operações comerciais bem-sucedidas. Nosso compromisso vai além da conformidade legal: nos esforçamos para superar expectativas abastecendo madeira certificada e apoiando iniciativas que promovem conservação, proteção da biodiversidade e benefícios para comunidades locais. Nosso objetivo é garantir que cada produto que chega até você tenha passado por uma cadeia de fornecimento que respeita o planeta, as pessoas e os ecossistemas."
+    },
+    "contact": {
+      "title": "Perguntas sobre nossas práticas de conformidade?",
+      "description": "Estamos comprometidos com a transparência e ficamos felizes em discutir nossos procedimentos de conformidade com parceiros e clientes potenciais.",
+      "button": "Entre em Contato"
+    },
+    "summary": {
+      "title": "Nosso Compromisso com Madeira Legal e Responsável",
+      "description1": "Na Amazin Timber, garantimos que cada produto respeite os mais altos padrões legais e éticos. Nossa cadeia de fornecimento está em conformidade com regulamentações internacionais como o EUDR (Regulamento de Desmatamento da União Europeia) e a Lei Lacey dos EUA, garantindo que nossa madeira seja obtida de forma responsável e sustentável.",
+      "description2": "Desde avaliações de risco e auditorias de fornecedores até rastreabilidade completa, tomamos cada passo para proteger florestas, o meio ambiente e comunidades locais.",
+      "button": "Ler Nossa Política Completa"
+    }
+  },
+  "footer": {
+    "tagline": "Soluções de madeira globais, entregues em escala",
+    "email": "Email: sales@amazintimber.com",
+    "phone": "Telefone: +1 (555) 010-0000",
+    "copyright": "© 2025 Amazin Timber. Todos os direitos reservados."
+  }
+}
