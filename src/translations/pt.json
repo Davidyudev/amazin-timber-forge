@@ -152,7 +152,6 @@
       "companyName": "Nome da Empresa",
       "contactName": "Nome do Contato",
       "email": "Email Comercial",
-      "phone": "Telefone / WhatsApp",
       "location": "País e Cidade",
       "website": "Site",
       "productDescription": "Descrição do Produto",
@@ -202,8 +201,7 @@
   },
   "footer": {
     "tagline": "Soluções de madeira globais, entregues em escala",
-    "email": "Email: sales@amazintimber.com",
-    "phone": "Telefone: +1 (555) 010-0000",
+    "email": "Email: contact@amazintimber.com",
     "copyright": "© 2025 Amazin Timber. Todos os direitos reservados."
   }
 }

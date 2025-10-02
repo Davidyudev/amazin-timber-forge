@@ -246,8 +246,6 @@ const CompliancePage = () => {
             <p className="text-white/80 mb-4">{t("footer.tagline")}</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-white/60">
               <span>{t("footer.email")}</span>
-              <span className="hidden sm:inline">|</span>
-              <span>{t("footer.phone")}</span>
             </div>
             <div className="mt-8 pt-8 border-t border-white/20 text-center text-sm text-white/40">
               <p>{t("footer.copyright")}</p>

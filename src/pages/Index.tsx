@@ -442,10 +442,6 @@ const Index = () => {
                 <input type="email" id="email" name="email" required className="form-input" />
               </div>
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">{t("quote.form.phone")} *</label>
-                <input type="tel" id="phone" name="phone" required className="form-input" />
-              </div>
-              <div>
                 <label htmlFor="location" className="block text-sm font-medium text-foreground mb-2">{t("quote.form.location")} *</label>
                 <input type="text" id="location" name="location" required className="form-input" />
               </div>
@@ -484,8 +480,6 @@ const Index = () => {
             <p className="text-white/80 mb-4">{t("footer.tagline")}</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-white/60">
               <span>{t("footer.email")}</span>
-              <span className="hidden sm:inline">|</span>
-              <span>{t("footer.phone")}</span>
             </div>
             <div className="mt-8 pt-8 border-t border-white/20 text-center text-sm text-white/40">
               <p>{t("footer.copyright")}</p>

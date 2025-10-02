@@ -39,8 +39,7 @@ A professional B2B timber industry website optimized for Netlify deployment with
 
 #### Contact Information
 Replace these placeholders throughout the site:
-- `sales@amazintimber.com` → Your actual email
-- `+1 (555) 010-0000` → Your actual phone number
+- `contact@amazintimber.com` → Your actual email
 
 #### Logo & Assets
 Upload your files to these exact paths:
