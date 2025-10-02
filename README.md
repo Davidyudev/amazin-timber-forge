@@ -44,7 +44,11 @@ Replace these placeholders throughout the site:
 #### Logo & Assets
 Upload your files to these exact paths:
 - `/assets/amazin-timber-logo.png` → Your logo file
-- `/assets/Amazin-Timber-2025-Catalog.pdf` → Your catalog PDF
+- `/assets/Amazin_Timber_en.pdf` → English catalog PDF
+- `/assets/Amazin_Timber_ar.pdf` → Arabic catalog PDF
+- `/assets/Amazin_Timber_pt.pdf` → Portuguese catalog PDF
+- `/assets/Amazin_Timber_es.pdf` → Spanish catalog PDF
+- `/assets/Amazin_Timber_fr.pdf` → French catalog PDF
 
 ### 4. Content Customization
 

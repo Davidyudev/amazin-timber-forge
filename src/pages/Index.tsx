@@ -375,7 +375,7 @@ const Index = () => {
             {t("catalog.subtitle")}
           </p>
           <Button className="btn-primary" asChild>
-            <a href="/assets/Amazin-Timber-2025-Catalog.pdf" target="_blank" rel="noreferrer">
+            <a href={`/assets/Amazin_Timber_${i18n.language}.pdf`} target="_blank" rel="noreferrer">
               {t("catalog.cta")}
             </a>
           </Button>

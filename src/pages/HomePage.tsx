@@ -238,7 +238,7 @@ const HomePage = () => {
                 className="border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-medium"
                 asChild
               >
-                <a href="/assets/Amazin-Timber-2025-Catalog.pdf" target="_blank" rel="noreferrer">
+                <a href={`/assets/Amazin_Timber_${i18n.language}.pdf`} target="_blank" rel="noreferrer">
                   {t("hero.cta.catalog")}
                 </a>
               </Button>
